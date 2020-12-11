@@ -1,0 +1,28 @@
+﻿@model IEnumerable<HeritageWebApplication.Models.HeritageObject>
+@{
+    Layout = "_Layout";
+}
+<style>
+</style>
+<div>
+    @foreach (var heritageObject in Model)
+    {
+        <table>
+            <td>
+                @{
+                    if (@heritageObject.Image != null)
+                    {
+                        <img src="~/img/heritageObjects/@heritageObject.Image" height="177" width="177">
+                    }
+                }
+            </td>
+            <td>
+                <tr><h1><p>@heritageObject.Type</p></h1></tr>
+                <tr><p>@heritageObject.ShortDesc</p></tr>
+            </td>
+        </table>
+        <p>
+            <a href="~/HeritageComment/Index/@heritageObject.Id">Просмотр</a>
+        </p>
+    }
+</div>

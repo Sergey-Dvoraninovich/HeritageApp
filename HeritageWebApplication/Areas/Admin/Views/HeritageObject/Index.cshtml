@@ -1,0 +1,29 @@
+﻿@model IEnumerable<HeritageWebApplication.Models.HeritageObject>
+
+@{
+    ViewBag.Title = "Список исторических объектов";
+}
+ 
+<a href="~/Admin/HeritageObject/Create">Добавить объект</a>
+@{
+    Layout = "_Layout";
+} 
+<div>
+    @foreach (var heritageObject in Model)
+    {
+        <p><h1>@heritageObject.Type</h1></p>
+        <p>@heritageObject.ShortDesc</p>
+        if (@heritageObject.Image != null)
+        {
+            <img src="~/img/heritageObjects/@heritageObject.Image" width="360" height="360">
+        }
+        <p>@heritageObject.Condition</p>
+        <p>@heritageObject.Desc</p>
+        <p>
+            <form action="/admin/heritageobject/delete?id=@heritageObject.Id" method="post">
+                <a class="draw-outline draw-outline--tandem" href="/admin/heritageobject/edit?id=@heritageObject.Id">Edit</a>
+                <button class="draw-outline draw-outline--tandem" type="submit"> Delete </button>
+            </form>
+        </p>
+    }
+</div>

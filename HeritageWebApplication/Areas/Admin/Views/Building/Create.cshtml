@@ -1,0 +1,179 @@
+﻿@model HeritageWebApplication.Areas.Admin.ViewModels.CreateBuildingViewModel
+@{
+    ViewBag.Title = "Добавление сооружения";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+body {
+  background: #e6f4fd;
+  font-family: 'Roboto', sans-serif;
+}
+.ui-form {
+  max-width: 350px;
+  padding: 80px 30px 30px;
+  margin: 50px auto 30px;
+  background: white;
+}
+.ui-form h3 {
+  position: relative;
+  z-index: 5;
+  margin: 0 0 60px;
+  text-align: center;
+  color: #4a90e2;
+  font-size: 30px;
+  font-weight: normal;
+}
+.ui-form h3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 60px;
+  top: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.ui-form h3:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 50px;
+  top: -40px;
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 90px solid #ffe3b5;
+}
+.form-row {
+  position: relative;
+  margin-bottom: 40px;
+}
+.form-row input {
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 40px;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border-width: 0;
+  border-bottom: 2px solid #4a90e2;
+  transition: all 0.2s ease;
+}
+.form-row label {
+  position: absolute;
+  left: 13px;
+  color: #9d959d;
+  font-size: 20px;
+  font-weight: 300;
+  transform: translateY(-35px);
+  transition: all 0.2s ease;
+}
+.form-row input:focus {
+  outline: 0;
+  border-color: #F77A52;
+}
+.form-row input:focus + label, 
+.form-row input:valid + label {
+  transform: translateY(-60px);
+  margin-left: -14px;
+  font-size: 14px;
+  font-weight: 400;
+  outline: 0;
+  border-color: #F77A52;
+  color: #F77A52;
+}
+.ui-form input[type="submit"] {
+  width: 100%;
+  padding: 0;
+  line-height: 42px;
+  background: #4a90e2;
+  border-width: 0;
+  color: white;
+  font-size: 20px;
+}
+.ui-form p {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.input__wrapper {
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+  text-align: center;
+}
+ 
+.input__file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+ 
+.input__file-icon-wrapper {
+  height: 60px;
+  width: 60px;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid #fff;
+}
+ 
+.input__file-button-text {
+  line-height: 1;
+  margin-top: 1px;
+}
+ 
+.input__file-button {
+  width: 100%;
+  max-width: 290px;
+  height: 60px;
+  background: #1bbc9b;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+
+</style>
+<form action="/admin/building/create" enctype="multipart/form-data" method="post" class="ui-form">
+    <div asp-validation-summary="All"></div>
+    <h3>Добавление сооружения</h3>
+    <div class="form-row">
+        <input type="text" asp-for="Name" id="nm" required autocomplete="off"><label for="nm">Наименование</label>
+    </div>
+  <div class="form-row">
+    <input type="text" asp-for="ShortDesc" id="shtdsc" required autocomplete="off"><label for="shtdsc">Краткое описание</label>
+  </div>
+  <div class="form-row">
+        <input type="text" asp-for="Location" id="lct" required autocomplete="off"><label for="lct">Местоположение</label>
+    </div>
+  <div class="form-row">
+    <input type="text" asp-for="Desc" id="dsc" required autocomplete="off"><label for="dsc">Описание</label>
+  </div>
+  <div class="form-group">
+    <label asp-for="Image" class="control-label">Изображение</label>
+    <input type="file" asp-for="Image" class="form-control" />
+  </div>
+  <p><input type="submit" value="Добавить" class="btn btn-outline-secondary"></p>
+</form>

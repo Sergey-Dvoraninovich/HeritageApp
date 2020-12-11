@@ -1,0 +1,22 @@
+﻿@model IEnumerable<HeritageWebApplication.Models.Building>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+<div>
+    @foreach (var building in Model)
+    {
+        <p><h1>@building.Name</h1></p>
+        <p>@building.ShortDesc</p>
+        if (@building.Image != null)
+        {
+            <img src="~/img/heritageObjects/@building.Image">
+        }
+        <p>@building.Location</p>
+        <p>@building.Desc</p>
+        <p>
+            <a class="btn btn-sm btn-primary" asp-action="Container" asp-route-id="@building.Id">Просмотр</a>
+        </p>
+    }
+</div>

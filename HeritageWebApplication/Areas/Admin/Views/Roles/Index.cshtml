@@ -1,0 +1,16 @@
+﻿@model IEnumerable<HeritageWebApplication.Models.User>
+@{
+    Layout = "_Layout";
+} 
+<h2>Список пользователей</h2>
+<table class="table">
+    @foreach (var user in Model)
+    {
+            <tr>
+                <td>@user.Email</td>
+                <td>
+                    <a class="draw-outline draw-outline--tandem" href="/Admin/Roles/Edit?id=@user.Id">Права доступа</a>
+                </td>
+            </tr>
+    }
+</table>

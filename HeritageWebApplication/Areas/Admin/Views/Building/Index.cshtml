@@ -1,0 +1,30 @@
+﻿@using HeritageWebApplication.Models
+@model IEnumerable<HeritageWebApplication.Models.Building>
+
+@{
+    ViewBag.Title = "Список Сооружений";
+}
+
+<a href="~/Admin/Building/Create">Добавить сооружение</a>
+@{
+    Layout = "_Layout";
+} 
+<div>
+    @foreach (var building in Model)
+    {
+        <p><h1>@building.Name</h1></p>
+        <p>@building.ShortDesc</p>
+        if (@building.Image != null)
+        {
+            <img src="~/img/heritageObjects/@building.Image" width="360" height="360">
+        }
+        <p>@building.Location</p>
+        <p>@building.Desc</p>
+        <p>
+            <form action="/admin/building/delete?id=@building.Id" method="post">
+                <a class="draw-outline draw-outline--tandem" href="/admin/building/edit?id=@building.Id">Edit</a>
+                <button class="draw-outline draw-outline--tandem" type="submit"> Delete </button>
+            </form>
+        </p>
+    }
+</div>

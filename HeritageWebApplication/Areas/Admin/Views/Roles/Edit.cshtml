@@ -1,0 +1,18 @@
+﻿@using HeritageWebApplication.Models
+@using HeritageWebApplication.Models
+@using Microsoft.AspNetCore.Identity
+@model HeritageWebApplication.Areas.Admin.ViewModels.ChangeRoleViewModel
+ 
+<h2>Изменение ролей для пользователя @Model.UserEmail</h2>
+ 
+<form action="/admin/roles/edit" method="post">
+    <input type="hidden" name="userId" value="@Model.UserId" />
+    <div class="form-group">
+        @foreach (UserRole role in Model.AllRoles)
+        {
+            <input type="checkbox" name="roles" value="@role.Name"
+                   @(Model.UserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />@role.Name <br />
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>

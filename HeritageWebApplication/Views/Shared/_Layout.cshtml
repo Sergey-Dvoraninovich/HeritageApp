@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+</style>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+<div class="sidenav">
+    <p>
+        <a href="~/" >Сооружения</a>
+    </p>
+            <a href="~/Admin/Building">Здания</a>
+            <a href="~/Admin/HeritageObject">Объекты</a>
+            <a href="~/Admin/Comment">Комментарии</a>
+            <a href="~/Admin/Roles">Роли</a>
+            <a href="~/Admin/Users">Пользователи</a>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>
+            <a asp-controller="Home" asp-action="Index">@User.Identity.Name</a>
+        </p>
+        <p>
+            <a asp-controller="Home" asp-action="EditUserData">Изменить</a>
+        </p>
+        <p>
+            <form method="post" asp-controller="Account" asp-action="Logout">
+                <a type="submit" asp-controller="Account" asp-action="Logout">Выход</a>
+            </form>
+        </p>
+    }
+    else
+    {
+        <p>
+            <a asp-controller="Account" asp-action="Login">Вход</a>
+        </p>
+        <p>
+            <a asp-controller="Account" asp-action="Register">Регистрация</a>
+        </p>
+        
+    }
+</div>
+
+<div class="main">
+    @RenderBody()
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.7/signalr.min.js"></script>
+<script>
+        const hubConnection = new signalR.HubConnectionBuilder()
+            .withUrl("/chat")
+            .build();
+ 
+        hubConnection.on('notify', function (message)
+            {
+                alert(message);
+            });
+ 
+        hubConnection.start();
+</script>
+
+</body>

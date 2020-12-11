@@ -1,0 +1,61 @@
+﻿@model IEnumerable<HeritageWebApplication.Models.Comment>
+@{
+    Layout = "_Layout";
+}
+<style> 
+.exam_04 {
+           border-radius: 5px;
+           color: #fff;
+           width: 400px;
+           font-family: verdana, 'open sans', sans-serif;
+           padding: 10px 14px 10px 44px;
+           position: relative;
+           box-shadow: 0px 1px 5px #999;
+           background-color: #8a9bab;
+       }
+</style>
+<div>
+    <p>@ViewBag.HeritageObject.Type</p>
+    <p>@ViewBag.HeritageObject.ShortDesc</p>
+    @{
+        if (@ViewBag.HeritageObject.Image != null)
+        {
+            <img src="~/img/heritageObjects/@ViewBag.HeritageObject.Image" width="360" height="360">
+        }
+    }
+    <p>@ViewBag.HeritageObject.Condition</p>
+    <p>@ViewBag.HeritageObject.Desc</p>
+</div>
+<div>
+    @foreach (var comment in Model)
+    {
+        <p>
+    <div class="exam_04">
+        <p>@comment.Text</p>
+        <p>
+            <table>
+                <tr>@comment.Time</tr>
+                @{
+                    if (@comment.IsEdited)
+                    {
+                        <tr>edited</tr>
+                    }
+                }
+            </table>
+        </p>
+        @{
+            if (comment.UserId.ToString() == ViewBag.UserId)
+            {
+                <form asp-action="DeleteComment" asp-route-id="@comment.Id" method="post">
+                    <a class="btn btn-sm btn-primary" asp-action="EditComment" asp-route-id="@comment.Id">Изменить</a>
+                    <button type="submit" class="btn btn-sm btn-danger">Удалить</button>
+                </form>
+            }
+        }
+    </div>
+    </p>
+    }
+</div>
+<div>
+    <a class="btn btn-sm btn-primary" asp-action="CreateComment" asp-route-id="@ViewBag.HeritageObjectId">Добавить комментарий</a>
+</div>

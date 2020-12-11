@@ -1,0 +1,87 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Migrations" />
+      <Folder Include="wwwroot\img" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="bootstrap" Version="5.0.0-alpha1" />
+      <PackageReference Include="MailKit" Version="2.10.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.0" />
+      <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\layoutsharedstyle.css">
+        <Link>wwwroot\css\layoutsharedstyle.css</Link>
+      </Content>
+      <Content Include="..\..\..\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\styles.css">
+        <Link>wwwroot\css\styles.css</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Building\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Building\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Building\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Comment\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Comment\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Comment\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\HeritageObject\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\HeritageObject\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\HeritageObject\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Roles\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Roles\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Roles\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Roles\UserList.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Users\ChangePassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Users\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Users\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Users\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Building\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Building\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Building\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Comment\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Comment\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Comment\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\HeritageObject\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\HeritageObject\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\HeritageObject\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Roles\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Roles\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Roles\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Roles\UserList.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Users\ChangePassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Users\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Users\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Users\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Building\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Building\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Building\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Roles\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Roles\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Roles\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Roles\UserList.cshtml" />
+      <UpToDateCheckInput Remove="Views\Users\ChangePassword.cshtml" />
+      <UpToDateCheckInput Remove="Views\Users\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Users\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Users\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Comment\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Comment\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Comment\Index.cshtml" />
+    </ItemGroup>
+
+</Project>

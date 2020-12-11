@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.min.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\LayoutSharedStyle.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\Styles.css" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.js" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.js.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.js" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.js.map" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.min.js" t="Include" />
+    <e p="C:\Users\Сергей\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" t="Include" />
+    <e p="C:\Users\Сергей\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Сергей\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_HeritageWebApplication.1627290576.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Сергей\AppData\Roaming\JetBrains\Rider2020.2\javascript\extLibs\http_ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.js" t="IncludeRecursive" />
+    <e p="C:\Users\Сергей\AppData\Roaming\JetBrains\Rider2020.2\javascript\extLibs\http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_css_bootstrap.css" t="IncludeRecursive" />
+    <e p="C:\Users\Сергей\AppData\Roaming\JetBrains\Rider2020.2\javascript\extLibs\http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.js" t="IncludeRecursive" />
+    <e p="C:\Users\Сергей\RiderProjects\HeritageWebApplication" t="IncludeFlat">
+      <e p="HeritageWebApplication" t="IncludeRecursive">
+        <e p="AdminAreaAuth.cs" t="Include" />
+        <e p="AllowedExtensions.cs" t="Include" />
+        <e p="ApplicationDBContext.cs" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Areas" t="Include">
+          <e p="Admin" t="Include">
+            <e p="Controllers" t="Include">
+              <e p="BuildingController.cs" t="Include" />
+              <e p="CommentController.cs" t="Include" />
+              <e p="HeritageObjectController.cs" t="Include" />
+              <e p="RolesController.cs" t="Include" />
+              <e p="UsersController.cs" t="Include" />
+            </e>
+            <e p="ViewModels" t="Include">
+              <e p="ChangeRoleVIewModel.cs" t="Include" />
+              <e p="CommentAdminViewModel.cs" t="Include" />
+              <e p="CreateBuildingViewModel.cs" t="Include" />
+              <e p="CreateHeritageObjectViewModel.cs" t="Include" />
+              <e p="CreateUserViewModel.cs" t="Include" />
+              <e p="EditBuildingViewModel.cs" t="Include" />
+              <e p="EditHeritageObjectViewModel.cs" t="Include" />
+              <e p="EditUserViewModel.cs" t="Include" />
+            </e>
+            <e p="Views" t="Include">
+              <e p="_ViewImports.cshtml" t="Include" />
+              <e p="Building" t="Include">
+                <e p="create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Comment" t="Include">
+                <e p="create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="HeritageObject" t="Include">
+                <e p="create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Roles" t="Include">
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Users" t="Include">
+                <e p="ChangePassword.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ChatHub.cs" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
+          <e p="ErrorController.cs" t="Include" />
+          <e p="HeritageCommentController.cs" t="Include" />
+          <e p="HomeController.cs" t="Include" />
+          <e p="TestController.cs" t="Include" />
+        </e>
+        <e p="HeritageWebApplication.csproj" t="IncludeRecursive" />
+        <e p="MailConfig.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20201211080648_'newname'.cs" t="Include" />
+          <e p="20201211080648_'newname'.Designer.cs" t="Include" />
+          <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Building.cs" t="Include" />
+          <e p="Comment.cs" t="Include" />
+          <e p="HeritageObject.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="UserRole.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="HeritageWebApplication.AssemblyInfo.cs" t="Include" />
+              <e p="HeritageWebApplication.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Repository" t="Include">
+          <e p="BuildingRepository.cs" t="Include" />
+          <e p="CommentRepository.cs" t="Include" />
+          <e p="DataManager.cs" t="Include" />
+          <e p="HeritageObjectRepository.cs" t="Include" />
+          <e p="IDataManager.cs" t="Include" />
+          <e p="Irepository.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="EmailService.cs" t="Include" />
+          <e p="IEmailService.cs" t="Include" />
+          <e p="IImageService.cs" t="Include" />
+          <e p="ImageService.cs" t="Include" />
+          <e p="ITestHeritage.cs" t="Include" />
+          <e p="TesterHeritage.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="ChangeDataViewModel.cs" t="Include" />
+          <e p="ChangePasswordViewModel.cs" t="Include" />
+          <e p="CommentViewModel.cs" t="Include" />
+          <e p="LoginViewModel.cs" t="Include" />
+          <e p="RegisterViewModel.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewImports.cshtml.cs" t="Include" />
+          <e p="Account" t="Include">
+            <e p="Error.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+            <e p="Redirect.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+          </e>
+          <e p="Error" t="Include">
+            <e p="403.cshtml" t="Include" />
+            <e p="404.cshtml" t="Include" />
+          </e>
+          <e p="HeritageComment" t="Include">
+            <e p="CreateComment.cshtml" t="Include" />
+            <e p="EditComment.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Home" t="Include">
+            <e p="Container.cshtml" t="Include" />
+            <e p="EditUserData.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="CssShared.cshtml" t="Include" />
+          </e>
+          <e p="Test" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include" />
+          <e p="img" t="Include">
+            <e p="heritageObjects" t="Include">
+              <e p="01ab0c41-050e-4384-a956-028906cb5790_ratusha.jpg" t="Include" />
+              <e p="044edcca-cfe8-4cf1-aff2-a63ef909921a_colors.jpg" t="Include" />
+              <e p="0535a09a-c40a-4ce4-9c8b-55f8dd9403ef_fdaff62153776e975ab1e48a1cabb3bb.jpg" t="Include" />
+              <e p="180375d2-8bab-456a-af5b-432c5c45b0b8_divider-clipart-blue-3.png" t="Include" />
+              <e p="1eaf3997-45d5-4352-b61f-8e0ad50447b0_house.jpg" t="Include" />
+              <e p="2271d9cc-f56f-4d39-80e0-71ae52d16748_nastol.com.ua-225408.jpg" t="Include" />
+              <e p="298110c7-eaa7-4e36-b791-4042f77b9047_mozaika.jpg" t="Include" />
+              <e p="418c6408-0cdd-453a-82aa-fd2f8f969a3d_a1d37d6b96758b88245ac0c5c02ff4d8.jpg" t="Include" />
+              <e p="42397673-4333-421e-b97a-789e7b07512f_05a4cb9475a8e35f9309492361021a86.jpg" t="Include" />
+              <e p="42daf708-8164-4ce0-94e9-cd7133ac9fcb_colors.jpg" t="Include" />
+              <e p="43231307-6394-44fa-93ae-c30c131beea4_erker.jpg" t="Include" />
+              <e p="4e1731a4-291d-49cc-b3ea-99d0e1be632a_colors.jpg" t="Include" />
+              <e p="53451a15-4a9c-41b6-956f-2c23f893cab1_colors.jpg" t="Include" />
+              <e p="55452d20-7db7-4c5d-976d-7c71803742cd_Account1-removebg-preview.png" t="Include" />
+              <e p="555bb36d-2403-458d-9007-d59bf087d36a_ad0ef618d434f4146296f5e8d8a89350.jpg" t="Include" />
+              <e p="67784896-efab-464d-9123-43441c185579_colors.jpg" t="Include" />
+              <e p="6d9e5472-95b2-4fa1-8674-fd028a3432cd_house.jpg" t="Include" />
+              <e p="6f3ba1f5-f78f-4033-a4ce-4344a5812119_ratusha.jpg" t="Include" />
+              <e p="7edef934-8386-424a-8740-dc1d3644b1b2_nastol.com.ua-225408.jpg" t="Include" />
+              <e p="8b1b06dd-b760-4f4b-90de-0e88d04c0fb1_cycle.png" t="Include" />
+              <e p="ab8b88d3-67ef-4cd0-b2b7-50999be6afcc_house.jpg" t="Include" />
+              <e p="af8d8953-5fed-4fb1-a55f-8d718faf6f4d_Account1-removebg-preview.png" t="Include" />
+              <e p="d3adc3fd-1aa0-4551-b15f-bba3d31173a5_92_oooo.plus.png" t="Include" />
+              <e p="e671f564-df77-48cf-baec-4282c74b6d37_house.jpg" t="Include" />
+              <e p="e7f33bec-6694-47ce-a9b6-b9a803d04eab_house.jpg" t="Include" />
+              <e p="eb2b8bbd-c15f-4b02-9034-abe4ffa33126_Account1-removebg-preview.png" t="Include" />
+              <e p="f781b165-81af-4115-a722-62d97207e1ec_32328e4bb7ec2330705f08efa947ce28.jpg" t="Include" />
+              <e p="f826b1aa-0ba8-416f-9876-f675c330558b_92_oooo.plus.png" t="Include" />
+            </e>
+          </e>
+          <e p="js" t="Include" />
+          <e p="logs" t="Include">
+            <e p="all-20201210.log" t="Include" />
+            <e p="all-20201211.log" t="Include" />
+            <e p="error-20201210.log" t="Include" />
+            <e p="error-20201211.log" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="HeritageWebApplication.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
