@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using HeritageWebApplication.Areas.Admin.ViewModels;
 using HeritageWebApplication.Models;
+using HeritageWebApplication.Services;
 using HeritageWebApplication.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,57 +13,20 @@ namespace HeritageWebApplication.Areas.Admin.Controllers
     public class UsersController : Controller
     {
         UserManager<User> _userManager;
+        private IInfoService _infoService;
  
-        public UsersController(UserManager<User> userManager)
+        public UsersController(UserManager<User> userManager, IInfoService infoService)
         {
             _userManager = userManager;
+            _infoService = infoService;
         }
- 
-        public IActionResult Index() => View(_userManager.Users.ToList());
 
-        /*public async Task<IActionResult> Edit(string id)
+        public IActionResult Index()
         {
-            User user = await _userManager.FindByIdAsync(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            EditUserViewModel model = new EditUserViewModel
-            {
-                //Id = user.Id,
-                Email = user.Email
-            };
-            return View(model);
+            ViewBag.time = _infoService.StartTime().ToString();
+            return View(_userManager.Users.ToList());
         }
- 
-        [HttpPost]
-        public async Task<IActionResult> Edit(EditUserViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                User user = await _userManager.FindByIdAsync(model.Id);
-                if(user!=null)
-                {
-                    user.Email = model.Email;
-                    user.UserName = model.Email;
 
-                    var result = await _userManager.UpdateAsync(user);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index");
-                    }
-                    else
-                    {
-                        foreach (var error in result.Errors)
-                        {
-                            ModelState.AddModelError(string.Empty, error.Description);
-                        }
-                    }
-                }
-            }
-            return View(model);
-        }*/
- 
         [HttpPost]
         public async Task<ActionResult> Delete(string id)
         {

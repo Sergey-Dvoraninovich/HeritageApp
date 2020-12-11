@@ -51,12 +51,7 @@ namespace HeritageWebApplication
             services.AddScoped<IDataManager, DataManager>();
             services.AddScoped<IImageService, ImageService>();
             
-            //Authentication
-            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            //    .AddCookie(options => //CookieAuthenticationOptions
-            //    {
-            //        options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
-            //    });
+            
             services.AddIdentity<User, UserRole>(options =>
                     //services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
                 {
@@ -102,7 +97,8 @@ namespace HeritageWebApplication
                 .AddSessionStateTempDataProvider();
             
             services.AddSignalR();
-            
+            services.AddSingleton<IInfoService, InfoService>();
+
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

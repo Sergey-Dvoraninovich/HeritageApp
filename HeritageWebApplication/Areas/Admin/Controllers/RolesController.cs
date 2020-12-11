@@ -23,42 +23,7 @@ namespace HeritageWebApplication.Areas.Admin.Controllers
         //public IActionResult Index() => View(_roleManager.Roles.ToList());
 
         public IActionResult Index() => View(_userManager.Users.ToList());
-        
-        /*public IActionResult Create() => View();
-        [HttpPost]
-        public async Task<IActionResult> Create(string name)
-        {
-            if (!string.IsNullOrEmpty(name))
-            {
-                UserRole user = new UserRole();
-                user.Name = name;
-                IdentityResult result = await _roleManager.CreateAsync(user);
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    }
-                }
-            }
-            return View(name);
-        }
-         
-        [HttpPost]
-        public async Task<IActionResult> Delete(string id)
-        {
-            UserRole role = await _roleManager.FindByIdAsync(id);
-            if (role != null)
-            {
-                IdentityResult result = await _roleManager.DeleteAsync(role);
-            }
-            return RedirectToAction("Index");
-        }*/
-        
+
         public async Task<IActionResult> Edit(int id)
         {
             User user = await _userManager.FindByIdAsync(id.ToString());

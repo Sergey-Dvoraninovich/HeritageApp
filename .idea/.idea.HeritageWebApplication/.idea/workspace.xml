@@ -24,18 +24,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Users/Create.cshtml" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/ViewModels/CreateBuildingViewModel.cs" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Building/Index.cshtml" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Controllers/HeritageObjectController.cs" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/HeritageObject/Index.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/ViewModels/CommentViewModel.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/ViewModels/CommentAdminViewModel.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/ViewModels/ChangeRoleViewModel.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Roles/Create.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Users/Edit.cshtml" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Users/Index.cshtml" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Controllers/UsersController.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Roles/Edit.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/MessageHub.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Views/Comment/Index.cshtml" />
@@ -49,7 +42,6 @@
         <option value="$USER_HOME$/.nuget/packages/bootstrap/5.0.0-alpha1/contentFiles/any/any/wwwroot/js/message.js" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Comment/Index.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/ChatHub.cs" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Startup.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Controllers/TestController.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Controllers/BuildingController.cs" />
@@ -67,14 +59,22 @@
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Controllers/CommentController.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Views/Shared/_Layout.cshtml" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Views/HeritageComment/Index.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Roles/UserList.cshtml" />
-        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Controllers/RolesController.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Controllers/AccountController.cs" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Views/Account/Redirect.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Views/Account/Login.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Roles/Index.cshtml" />
         <option value="$PROJECT_DIR$/HeritageWebApplication/Views/Account/Register.cshtml" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Views/HeritageComment/Index.cshtml" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Services/Info.cs" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Services/IInfo.cs" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Services/IInfoService.cs" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Startup.cs" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Services/EmailService.cs" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Controllers/UsersController.cs" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Views/Users/Index.cshtml" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Services/InfoService.cs" />
+        <option value="$PROJECT_DIR$/HeritageWebApplication/Areas/Admin/Controllers/RolesController.cs" />
       </list>
     </option>
   </component>
@@ -145,7 +145,7 @@
       <workItem from="1607346045806" duration="13739000" />
       <workItem from="1607374807105" duration="10103000" />
       <workItem from="1607455345905" duration="59873000" />
-      <workItem from="1607684484341" duration="13732000" />
+      <workItem from="1607684484341" duration="18774000" />
     </task>
     <servers />
   </component>
@@ -162,22 +162,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="454" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1607676989963" />
-    <state width="1493" height="227" key="GridCell.Tab.0.bottom" timestamp="1607701571783">
+    <state width="1493" height="227" key="GridCell.Tab.0.bottom" timestamp="1607719517635">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607701571783" />
-    <state width="1493" height="227" key="GridCell.Tab.0.center" timestamp="1607701571782">
+    <state width="1493" height="227" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607719517635" />
+    <state width="1493" height="227" key="GridCell.Tab.0.center" timestamp="1607719517635">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607701571782" />
-    <state width="1493" height="227" key="GridCell.Tab.0.left" timestamp="1607701571782">
+    <state width="1493" height="227" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607719517635" />
+    <state width="1493" height="227" key="GridCell.Tab.0.left" timestamp="1607719517634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607701571782" />
-    <state width="1493" height="227" key="GridCell.Tab.0.right" timestamp="1607701571782">
+    <state width="1493" height="227" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607719517634" />
+    <state width="1493" height="227" key="GridCell.Tab.0.right" timestamp="1607719517635">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607701571782" />
+    <state width="1493" height="227" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607719517635" />
     <state width="1493" height="189" key="GridCell.Tab.1.bottom" timestamp="1607699379583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

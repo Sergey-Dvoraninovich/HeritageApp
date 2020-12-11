@@ -16,6 +16,7 @@
 </style>
 <div>
     <p>@ViewBag.HeritageObject.Type</p>
+    <p><h3>Краткое описание:</h3></p>
     <p>@ViewBag.HeritageObject.ShortDesc</p>
     @{
         if (@ViewBag.HeritageObject.Image != null)
@@ -23,36 +24,38 @@
             <img src="~/img/heritageObjects/@ViewBag.HeritageObject.Image" width="360" height="360">
         }
     }
+    <p><h3>Состояние:</h3></p>
     <p>@ViewBag.HeritageObject.Condition</p>
+    <p><h3>Описание:</h3></p>
     <p>@ViewBag.HeritageObject.Desc</p>
 </div>
 <div>
     @foreach (var comment in Model)
     {
         <p>
-    <div class="exam_04">
-        <p>@comment.Text</p>
-        <p>
-            <table>
-                <tr>@comment.Time</tr>
+            <div class="exam_04">
+                <p>@comment.Text</p>
+                <p>
+                    <table>
+                        <tr>@comment.Time</tr>
+                        @{
+                            if (@comment.IsEdited)
+                            {
+                                <tr>edited</tr>
+                            }
+                        }
+                    </table>
+                </p>
                 @{
-                    if (@comment.IsEdited)
+                    if (comment.UserId.ToString() == ViewBag.UserId)
                     {
-                        <tr>edited</tr>
+                        <form asp-action="DeleteComment" asp-route-id="@comment.Id" method="post">
+                            <a class="btn btn-sm btn-primary" asp-action="EditComment" asp-route-id="@comment.Id">Изменить</a>
+                            <button type="submit" class="btn btn-sm btn-danger">Удалить</button>
+                        </form>
                     }
                 }
-            </table>
-        </p>
-        @{
-            if (comment.UserId.ToString() == ViewBag.UserId)
-            {
-                <form asp-action="DeleteComment" asp-route-id="@comment.Id" method="post">
-                    <a class="btn btn-sm btn-primary" asp-action="EditComment" asp-route-id="@comment.Id">Изменить</a>
-                    <button type="submit" class="btn btn-sm btn-danger">Удалить</button>
-                </form>
-            }
-        }
-    </div>
+            </div>
     </p>
     }
 </div>

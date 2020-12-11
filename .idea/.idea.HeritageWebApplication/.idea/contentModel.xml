@@ -137,7 +137,9 @@
           <e p="EmailService.cs" t="Include" />
           <e p="IEmailService.cs" t="Include" />
           <e p="IImageService.cs" t="Include" />
+          <e p="IInfoService.cs" t="Include" />
           <e p="ImageService.cs" t="Include" />
+          <e p="InfoService.cs" t="Include" />
           <e p="ITestHeritage.cs" t="Include" />
           <e p="TesterHeritage.cs" t="Include" />
         </e>
