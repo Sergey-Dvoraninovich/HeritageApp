@@ -6,11 +6,14 @@
 <table class="table">
     @foreach (var user in Model)
     {
+        @if (user.Email != @ViewBag.userMail)
+        {
             <tr>
                 <td>@user.Email</td>
                 <td>
                     <a class="draw-outline draw-outline--tandem" href="/Admin/Roles/Edit?id=@user.Id">Права доступа</a>
                 </td>
             </tr>
+        }
     }
 </table>

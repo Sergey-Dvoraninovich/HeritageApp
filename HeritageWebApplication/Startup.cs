@@ -49,7 +49,7 @@ namespace HeritageWebApplication
             services.AddScoped<IRepository<HeritageObject>, HeritageObjectRepository>();
             services.AddScoped<IRepository<Comment>, CommentRepository>();
             services.AddScoped<IDataManager, DataManager>();
-            services.AddScoped<IImageService, ImageService>();
+            services.AddTransient<IImageService, ImageService>();
             
             
             services.AddIdentity<User, UserRole>(options =>

@@ -21,8 +21,10 @@ namespace HeritageWebApplication.Areas.Admin.Controllers
             _infoService = infoService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            User cur_user = await _userManager.GetUserAsync(HttpContext.User);
+            ViewBag.userMail = cur_user.Email;
             ViewBag.time = _infoService.StartTime().ToString();
             return View(_userManager.Users.ToList());
         }

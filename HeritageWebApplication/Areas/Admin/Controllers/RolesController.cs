@@ -19,10 +19,13 @@ namespace HeritageWebApplication.Areas.Admin.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
         }
-        
-        //public IActionResult Index() => View(_roleManager.Roles.ToList());
 
-        public IActionResult Index() => View(_userManager.Users.ToList());
+        public async Task<IActionResult> Index()
+        {
+            User cur_user = await _userManager.GetUserAsync(HttpContext.User);
+            ViewBag.userMail = cur_user.Email;
+            return View(_userManager.Users.ToList());
+        }
 
         public async Task<IActionResult> Edit(int id)
         {
