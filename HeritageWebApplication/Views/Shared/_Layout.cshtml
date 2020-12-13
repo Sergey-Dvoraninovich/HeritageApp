@@ -41,14 +41,19 @@ body {
     <p>
         <a href="~/" >Сооружения</a>
     </p>
-            <a href="~/Admin/Building">Здания</a>
-            <a href="~/Admin/HeritageObject">Объекты</a>
-            <a href="~/Admin/Comment">Комментарии</a>
-            <a href="~/Admin/Roles">Роли</a>
-            <a href="~/Admin/Users">Пользователи</a>
 
     @if (User.Identity.IsAuthenticated)
     {
+        if (User.IsInRole("admin"))
+        {
+            <p>
+                <a href="~/Admin/Building">Здания</a>
+                <a href="~/Admin/HeritageObject">Объекты</a>
+                <a href="~/Admin/Comment">Комментарии</a>
+                <a href="~/Admin/Roles">Роли</a>
+                <a href="~/Admin/Users">Пользователи</a>
+            </p>
+        }
         <p>
             <a asp-controller="Home" asp-action="Index">@User.Identity.Name</a>
         </p>

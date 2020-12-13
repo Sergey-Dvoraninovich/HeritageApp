@@ -668,3 +668,425 @@ FROM \"Buildings\" AS b" (0723d8ff)
 2020-12-13T15:02:01.9397787+03:00 0HM4VBRDD4TH2:00000005 [INF] Executing endpoint '"/chat"' (500cc934)
 2020-12-13T15:02:12.4760121+03:00 0HM4VBRDD4TH2:00000005 [INF] Executed endpoint '"/chat"' (99874f2b)
 2020-12-13T15:02:12.4765351+03:00 0HM4VBRDD4TH2:00000005 [INF] Request finished in 10536.8559ms 101  (791a596a)
+2020-12-13T15:43:03.2266016+03:00  [INF] User profile is available. Using '"C:\Users\Сергей\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-12-13T15:43:03.5102891+03:00  [INF] Now listening on: "http://127.0.0.1:10695" (d826f4b8)
+2020-12-13T15:43:03.5125878+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-13T15:43:03.5126391+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-13T15:43:03.5126599+03:00  [INF] Content root path: "C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication" (b5d60022)
+2020-12-13T15:43:03.7782421+03:00 0HM4VCIH0U3KT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/   (ca22a1cb)
+2020-12-13T15:43:04.8441300+03:00 0HM4VCIH0U3KT:00000001 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:06.7368646+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed DbCommand ("154"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Id\" = @__p_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:07.0042318+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed DbCommand ("149"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM \"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2020-12-13T15:43:07.1802724+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed DbCommand ("146"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM \"AspNetUserRoles\" AS a
+INNER JOIN \"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2020-12-13T15:43:07.2284611+03:00 0HM4VCIH0U3KT:00000001 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:07.3826201+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed DbCommand ("147"ms) [Parameters=["@__normalizedName_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ConcurrencyStamp\", a.\"Name\", a.\"NormalizedName\"
+FROM \"AspNetRoles\" AS a
+WHERE a.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:07.5551300+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed DbCommand ("146"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"ClaimType\", a.\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS a
+WHERE a.\"RoleId\" = @__role_Id_0" (0723d8ff)
+2020-12-13T15:43:07.5731348+03:00 0HM4VCIH0U3KT:00000001 [INF] Executing endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:07.6029853+03:00 0HM4VCIH0U3KT:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "HeritageWebApplication.Controllers.HomeController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:07.6121801+03:00 0HM4VCIH0U3KT:00000001 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:07.7701359+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed DbCommand ("151"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT b.\"Id\", b.\"Desc\", b.\"Image\", b.\"Location\", b.\"Name\", b.\"ShortDesc\"
+FROM \"Buildings\" AS b" (0723d8ff)
+2020-12-13T15:43:07.8045755+03:00 0HM4VCIH0U3KT:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:43:07.8866343+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed ViewResult - view "Index" executed in 82.3773ms. (f66409e9)
+2020-12-13T15:43:07.8869457+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed action "HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)" in 283.6697ms (afa2e885)
+2020-12-13T15:43:07.8881282+03:00 0HM4VCIH0U3KT:00000001 [INF] Executed endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:07.8957762+03:00 0HM4VCIH0U3KT:00000001 [INF] Request finished in 4121.2124ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:43:07.9643547+03:00 0HM4VCIH0U3KU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/f2d3a666-3b53-443b-9214-ff4da5083466_house.jpg   (ca22a1cb)
+2020-12-13T15:43:07.9674452+03:00 0HM4VCIH0U3KU:00000001 [INF] Request finished in 3.1263ms 404  (791a596a)
+2020-12-13T15:43:07.9790503+03:00 0HM4VCIH0U3KT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/18122d89-7c41-4735-b15a-8f8f66fcd226_ratusha.jpg   (ca22a1cb)
+2020-12-13T15:43:07.9987177+03:00 0HM4VCIH0U3KT:00000002 [INF] Request finished in 19.6901ms 404  (791a596a)
+2020-12-13T15:43:08.0795580+03:00 0HM4VCIH0U3KU:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:43:08.0807629+03:00 0HM4VCIH0U3KU:00000002 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:43:08.0988565+03:00 0HM4VCIH0U3KU:00000002 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:43:08.0989557+03:00 0HM4VCIH0U3KU:00000002 [INF] Request finished in 19.5569ms 200 application/json (791a596a)
+2020-12-13T15:43:08.1301547+03:00 0HM4VCIH0U3KT:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=bkGHA7tDOLCzDNJyjrRulQ   (ca22a1cb)
+2020-12-13T15:43:08.1306879+03:00 0HM4VCIH0U3KT:00000003 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:43:11.6676064+03:00 0HM4VCIH0U3KU:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44327/Account/Logout   (ca22a1cb)
+2020-12-13T15:43:11.6742128+03:00 0HM4VCIH0U3KU:00000003 [INF] Executing endpoint '"HeritageWebApplication.Controllers.AccountController.Logout (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:11.6805972+03:00 0HM4VCIH0U3KU:00000003 [INF] Route matched with "{action = \"Logout\", controller = \"Account\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout()" on controller "HeritageWebApplication.Controllers.AccountController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:11.6860934+03:00 0HM4VCIH0U3KU:00000003 [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2020-12-13T15:43:11.6871464+03:00 0HM4VCIH0U3KU:00000003 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-12-13T15:43:11.6872908+03:00 0HM4VCIH0U3KU:00000003 [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2020-12-13T15:43:11.6884214+03:00 0HM4VCIH0U3KU:00000003 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-12-13T15:43:11.6886079+03:00 0HM4VCIH0U3KU:00000003 [INF] Executed action "HeritageWebApplication.Controllers.AccountController.Logout (HeritageWebApplication)" in 7.8384ms (afa2e885)
+2020-12-13T15:43:11.6886450+03:00 0HM4VCIH0U3KU:00000003 [INF] Executed endpoint '"HeritageWebApplication.Controllers.AccountController.Logout (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:11.6888871+03:00 0HM4VCIH0U3KU:00000003 [INF] Request finished in 22.0868ms 302  (791a596a)
+2020-12-13T15:43:11.6942867+03:00 0HM4VCIH0U3KU:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44327/   (ca22a1cb)
+2020-12-13T15:43:11.6947340+03:00 0HM4VCIH0U3KU:00000004 [INF] Executing endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:11.6950166+03:00 0HM4VCIH0U3KU:00000004 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "HeritageWebApplication.Controllers.HomeController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:11.6959417+03:00 0HM4VCIH0U3KU:00000004 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:11.9139540+03:00 0HM4VCIH0U3KU:00000004 [INF] Executed DbCommand ("217"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT b.\"Id\", b.\"Desc\", b.\"Image\", b.\"Location\", b.\"Name\", b.\"ShortDesc\"
+FROM \"Buildings\" AS b" (0723d8ff)
+2020-12-13T15:43:11.9153818+03:00 0HM4VCIH0U3KU:00000004 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:43:11.9216703+03:00 0HM4VCIH0U3KU:00000004 [INF] Executed ViewResult - view "Index" executed in 6.4288ms. (f66409e9)
+2020-12-13T15:43:11.9218709+03:00 0HM4VCIH0U3KU:00000004 [INF] Executed action "HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)" in 226.7793ms (afa2e885)
+2020-12-13T15:43:11.9219946+03:00 0HM4VCIH0U3KU:00000004 [INF] Executed endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:11.9223081+03:00 0HM4VCIH0U3KU:00000004 [INF] Request finished in 228.0083ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:43:11.9464846+03:00 0HM4VCIH0U3KT:00000003 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:43:11.9468945+03:00 0HM4VCIH0U3KT:00000003 [INF] Request finished in 3816.7377ms 101  (791a596a)
+2020-12-13T15:43:11.9600785+03:00 0HM4VCIH0U3KU:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/18122d89-7c41-4735-b15a-8f8f66fcd226_ratusha.jpg   (ca22a1cb)
+2020-12-13T15:43:11.9607603+03:00 0HM4VCIH0U3KU:00000005 [INF] Request finished in 0.7321ms 404  (791a596a)
+2020-12-13T15:43:11.9611380+03:00 0HM4VCIH0U3KV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/f2d3a666-3b53-443b-9214-ff4da5083466_house.jpg   (ca22a1cb)
+2020-12-13T15:43:11.9614552+03:00 0HM4VCIH0U3KV:00000001 [INF] Request finished in 0.3329ms 404  (791a596a)
+2020-12-13T15:43:11.9616926+03:00 0HM4VCIH0U3L0:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:43:11.9621062+03:00 0HM4VCIH0U3L0:00000001 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:43:11.9625487+03:00 0HM4VCIH0U3L0:00000001 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:43:11.9627354+03:00 0HM4VCIH0U3L0:00000001 [INF] Request finished in 1.0063ms 200 application/json (791a596a)
+2020-12-13T15:43:11.9741583+03:00 0HM4VCIH0U3KU:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=00a0T71tZZpLrWigSD3hNw   (ca22a1cb)
+2020-12-13T15:43:11.9743966+03:00 0HM4VCIH0U3KU:00000006 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:43:15.9009445+03:00 0HM4VCIH0U3KV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44327/Account/Login   (ca22a1cb)
+2020-12-13T15:43:15.9049242+03:00 0HM4VCIH0U3KV:00000002 [INF] Executing endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:15.9219107+03:00 0HM4VCIH0U3KV:00000002 [INF] Route matched with "{action = \"Login\", controller = \"Account\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login(System.String)" on controller "HeritageWebApplication.Controllers.AccountController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:15.9317951+03:00 0HM4VCIH0U3KV:00000002 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2020-12-13T15:43:15.9602958+03:00 0HM4VCIH0U3KV:00000002 [INF] Executed ViewResult - view "Login" executed in 29.18ms. (f66409e9)
+2020-12-13T15:43:15.9603799+03:00 0HM4VCIH0U3KV:00000002 [INF] Executed action "HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)" in 38.3816ms (afa2e885)
+2020-12-13T15:43:15.9604193+03:00 0HM4VCIH0U3KV:00000002 [INF] Executed endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:15.9605681+03:00 0HM4VCIH0U3KV:00000002 [INF] Request finished in 59.9625ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:43:15.9662224+03:00 0HM4VCIH0U3KU:00000006 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:43:15.9663150+03:00 0HM4VCIH0U3KU:00000006 [INF] Request finished in 3992.1768ms 101  (791a596a)
+2020-12-13T15:43:16.0216799+03:00 0HM4VCIH0U3L0:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:43:16.0220248+03:00 0HM4VCIH0U3L0:00000002 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:43:16.0223784+03:00 0HM4VCIH0U3L0:00000002 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:43:16.0224528+03:00 0HM4VCIH0U3L0:00000002 [INF] Request finished in 0.8555ms 200 application/json (791a596a)
+2020-12-13T15:43:16.0282392+03:00 0HM4VCIH0U3KV:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=qnEjD-xGjhhw7atc4hLIdg   (ca22a1cb)
+2020-12-13T15:43:16.0284306+03:00 0HM4VCIH0U3KV:00000003 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:43:47.5394060+03:00 0HM4VCIH0U3L0:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44327/Account/Login application/x-www-form-urlencoded 237 (ca22a1cb)
+2020-12-13T15:43:47.5407124+03:00 0HM4VCIH0U3L0:00000003 [INF] Executing endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:47.5470401+03:00 0HM4VCIH0U3L0:00000003 [INF] Route matched with "{action = \"Login\", controller = \"Account\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HeritageWebApplication.ViewModels.LoginViewModel)" on controller "HeritageWebApplication.Controllers.AccountController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:47.5753673+03:00 0HM4VCIH0U3L0:00000003 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:47.7296885+03:00 0HM4VCIH0U3L0:00000003 [INF] Executed DbCommand ("148"ms) [Parameters=["@__normalizedEmail_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2020-12-13T15:43:47.9131360+03:00 0HM4VCIH0U3L0:00000003 [INF] Executed DbCommand ("145"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM \"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2020-12-13T15:43:48.0626251+03:00 0HM4VCIH0U3L0:00000003 [INF] Executed DbCommand ("146"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM \"AspNetUserRoles\" AS a
+INNER JOIN \"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2020-12-13T15:43:48.0638817+03:00 0HM4VCIH0U3L0:00000003 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:48.2155472+03:00 0HM4VCIH0U3L0:00000003 [INF] Executed DbCommand ("150"ms) [Parameters=["@__normalizedName_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ConcurrencyStamp\", a.\"Name\", a.\"NormalizedName\"
+FROM \"AspNetRoles\" AS a
+WHERE a.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:48.3663336+03:00 0HM4VCIH0U3L0:00000003 [INF] Executed DbCommand ("146"ms) [Parameters=["@__role_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"ClaimType\", a.\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS a
+WHERE a.\"RoleId\" = @__role_Id_0" (0723d8ff)
+2020-12-13T15:43:48.3728802+03:00 0HM4VCIH0U3L0:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-12-13T15:43:48.3809373+03:00 0HM4VCIH0U3L0:00000003 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-12-13T15:43:48.3822207+03:00 0HM4VCIH0U3L0:00000003 [INF] Executed action "HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)" in 835.0545ms (afa2e885)
+2020-12-13T15:43:48.3823231+03:00 0HM4VCIH0U3L0:00000003 [INF] Executed endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:48.3829677+03:00 0HM4VCIH0U3L0:00000003 [INF] Request finished in 843.6196ms 302  (791a596a)
+2020-12-13T15:43:48.3907258+03:00 0HM4VCIH0U3L0:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44327/   (ca22a1cb)
+2020-12-13T15:43:48.3921465+03:00 0HM4VCIH0U3L0:00000004 [INF] Executing endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:48.3924754+03:00 0HM4VCIH0U3L0:00000004 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "HeritageWebApplication.Controllers.HomeController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:48.3960332+03:00 0HM4VCIH0U3L0:00000004 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:48.5424288+03:00 0HM4VCIH0U3L0:00000004 [INF] Executed DbCommand ("146"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT b.\"Id\", b.\"Desc\", b.\"Image\", b.\"Location\", b.\"Name\", b.\"ShortDesc\"
+FROM \"Buildings\" AS b" (0723d8ff)
+2020-12-13T15:43:48.5439020+03:00 0HM4VCIH0U3L0:00000004 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:43:48.5483175+03:00 0HM4VCIH0U3L0:00000004 [INF] Executed ViewResult - view "Index" executed in 4.5761ms. (f66409e9)
+2020-12-13T15:43:48.5484327+03:00 0HM4VCIH0U3L0:00000004 [INF] Executed action "HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)" in 155.896ms (afa2e885)
+2020-12-13T15:43:48.5484864+03:00 0HM4VCIH0U3L0:00000004 [INF] Executed endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:48.5486443+03:00 0HM4VCIH0U3L0:00000004 [INF] Request finished in 157.9655ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:43:48.5767942+03:00 0HM4VCIH0U3KV:00000003 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:43:48.5769308+03:00 0HM4VCIH0U3KV:00000003 [INF] Request finished in 32548.7027ms 101  (791a596a)
+2020-12-13T15:43:48.5913307+03:00 0HM4VCIH0U3L0:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/18122d89-7c41-4735-b15a-8f8f66fcd226_ratusha.jpg   (ca22a1cb)
+2020-12-13T15:43:48.5927521+03:00 0HM4VCIH0U3L1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/f2d3a666-3b53-443b-9214-ff4da5083466_house.jpg   (ca22a1cb)
+2020-12-13T15:43:48.5929018+03:00 0HM4VCIH0U3L0:00000005 [INF] Request finished in 1.5801ms 404  (791a596a)
+2020-12-13T15:43:48.5943038+03:00 0HM4VCIH0U3L1:00000001 [INF] Request finished in 1.5299ms 404  (791a596a)
+2020-12-13T15:43:48.6020649+03:00 0HM4VCIH0U3L0:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:43:48.6025088+03:00 0HM4VCIH0U3L0:00000006 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:43:48.6028166+03:00 0HM4VCIH0U3L0:00000006 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:43:48.6032221+03:00 0HM4VCIH0U3L0:00000006 [INF] Request finished in 1.0131ms 200 application/json (791a596a)
+2020-12-13T15:43:48.6123030+03:00 0HM4VCIH0U3L1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=yVKYdUGiApCUSBgUIxYPaQ   (ca22a1cb)
+2020-12-13T15:43:48.6127120+03:00 0HM4VCIH0U3L1:00000002 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:43:50.2788272+03:00 0HM4VCIH0U3L0:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44327/Admin/Roles   (ca22a1cb)
+2020-12-13T15:43:50.2803777+03:00 0HM4VCIH0U3L0:00000007 [INF] Executing endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:50.2837886+03:00 0HM4VCIH0U3L0:00000007 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Roles\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "HeritageWebApplication.Areas.Admin.Controllers.RolesController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:50.2913824+03:00 0HM4VCIH0U3L0:00000007 [INF] Authorization was successful. (0d575a54)
+2020-12-13T15:43:50.3026143+03:00 0HM4VCIH0U3L0:00000007 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:50.4517305+03:00 0HM4VCIH0U3L0:00000007 [INF] Executed DbCommand ("147"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Id\" = @__p_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:50.6628415+03:00 0HM4VCIH0U3L0:00000007 [INF] Executed DbCommand ("145"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a" (0723d8ff)
+2020-12-13T15:43:50.6680415+03:00 0HM4VCIH0U3L0:00000007 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:43:50.7043591+03:00 0HM4VCIH0U3L0:00000007 [INF] Executed ViewResult - view "Index" executed in 38.543ms. (f66409e9)
+2020-12-13T15:43:50.7045066+03:00 0HM4VCIH0U3L0:00000007 [INF] Executed action "HeritageWebApplication.Areas.Admin.Controllers.RolesController.Index (HeritageWebApplication)" in 420.6552ms (afa2e885)
+2020-12-13T15:43:50.7045619+03:00 0HM4VCIH0U3L0:00000007 [INF] Executed endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:50.7047427+03:00 0HM4VCIH0U3L0:00000007 [INF] Request finished in 425.9836ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:43:50.7123373+03:00 0HM4VCIH0U3L1:00000002 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:43:50.7124285+03:00 0HM4VCIH0U3L1:00000002 [INF] Request finished in 2100.1359ms 101  (791a596a)
+2020-12-13T15:43:50.7436250+03:00 0HM4VCIH0U3L0:00000008 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:43:50.7443805+03:00 0HM4VCIH0U3L0:00000008 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:43:50.7447392+03:00 0HM4VCIH0U3L0:00000008 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:43:50.7448252+03:00 0HM4VCIH0U3L0:00000008 [INF] Request finished in 1.293ms 200 application/json (791a596a)
+2020-12-13T15:43:50.7511765+03:00 0HM4VCIH0U3L0:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=hJDO7Dnbg7RTUDIPynw6lw   (ca22a1cb)
+2020-12-13T15:43:50.7516026+03:00 0HM4VCIH0U3L0:00000009 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:43:52.7616904+03:00 0HM4VCIH0U3L2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/Admin/Roles/Edit?id=2   (ca22a1cb)
+2020-12-13T15:43:52.7647209+03:00 0HM4VCIH0U3L2:00000001 [INF] Executing endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Edit (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:52.7687323+03:00 0HM4VCIH0U3L2:00000001 [INF] Route matched with "{area = \"Admin\", action = \"Edit\", controller = \"Roles\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32)" on controller "HeritageWebApplication.Areas.Admin.Controllers.RolesController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:52.7695544+03:00 0HM4VCIH0U3L2:00000001 [INF] Authorization was successful. (0d575a54)
+2020-12-13T15:43:52.7717831+03:00 0HM4VCIH0U3L2:00000001 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:53.0352850+03:00 0HM4VCIH0U3L2:00000001 [INF] Executed DbCommand ("262"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Id\" = @__p_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:53.2159691+03:00 0HM4VCIH0U3L2:00000001 [INF] Executed DbCommand ("175"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM \"AspNetUserRoles\" AS a
+INNER JOIN \"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2020-12-13T15:43:53.2214034+03:00 0HM4VCIH0U3L2:00000001 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:53.6654218+03:00 0HM4VCIH0U3L2:00000001 [INF] Executed DbCommand ("429"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ConcurrencyStamp\", a.\"Name\", a.\"NormalizedName\"
+FROM \"AspNetRoles\" AS a" (0723d8ff)
+2020-12-13T15:43:53.6706258+03:00 0HM4VCIH0U3L2:00000001 [INF] Executing ViewResult, running view "Edit". (c83d0e25)
+2020-12-13T15:43:53.6822745+03:00 0HM4VCIH0U3L2:00000001 [INF] Executed ViewResult - view "Edit" executed in 13.3976ms. (f66409e9)
+2020-12-13T15:43:53.6825787+03:00 0HM4VCIH0U3L2:00000001 [INF] Executed action "HeritageWebApplication.Areas.Admin.Controllers.RolesController.Edit (HeritageWebApplication)" in 913.7676ms (afa2e885)
+2020-12-13T15:43:53.6827218+03:00 0HM4VCIH0U3L2:00000001 [INF] Executed endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Edit (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:53.6831274+03:00 0HM4VCIH0U3L2:00000001 [INF] Request finished in 921.4797ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:43:53.6931038+03:00 0HM4VCIH0U3L0:00000009 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:43:53.6932699+03:00 0HM4VCIH0U3L0:00000009 [INF] Request finished in 2942.0545ms 101  (791a596a)
+2020-12-13T15:43:56.0842530+03:00 0HM4VCIH0U3L2:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44327/admin/roles/edit application/x-www-form-urlencoded 8 (ca22a1cb)
+2020-12-13T15:43:56.0868436+03:00 0HM4VCIH0U3L2:00000002 [INF] Executing endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Edit (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:56.0917806+03:00 0HM4VCIH0U3L2:00000002 [INF] Route matched with "{area = \"Admin\", action = \"Edit\", controller = \"Roles\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(System.String, System.Collections.Generic.List`1[System.String])" on controller "HeritageWebApplication.Areas.Admin.Controllers.RolesController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:56.0924238+03:00 0HM4VCIH0U3L2:00000002 [INF] Authorization was successful. (0d575a54)
+2020-12-13T15:43:56.0976809+03:00 0HM4VCIH0U3L2:00000002 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:56.2453723+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Id\" = @__p_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:56.3943495+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("145"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM \"AspNetUserRoles\" AS a
+INNER JOIN \"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2020-12-13T15:43:56.3956076+03:00 0HM4VCIH0U3L2:00000002 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:56.5419313+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ConcurrencyStamp\", a.\"Name\", a.\"NormalizedName\"
+FROM \"AspNetRoles\" AS a" (0723d8ff)
+2020-12-13T15:43:56.7217723+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@__normalizedUserName_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:56.8784229+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@__normalizedEmail_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2020-12-13T15:43:57.1275493+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("147"ms) [Parameters=["@p15='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?', @p16='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = Boolean), @p14='?'"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"AspNetUsers\" SET \"AccessFailedCount\" = @p0, \"ConcurrencyStamp\" = @p1, \"Email\" = @p2, \"EmailConfirmed\" = @p3, \"Image\" = @p4, \"LockoutEnabled\" = @p5, \"LockoutEnd\" = @p6, \"NormalizedEmail\" = @p7, \"NormalizedUserName\" = @p8, \"PasswordHash\" = @p9, \"PhoneNumber\" = @p10, \"PhoneNumberConfirmed\" = @p11, \"SecurityStamp\" = @p12, \"TwoFactorEnabled\" = @p13, \"UserName\" = @p14
+WHERE \"Id\" = @p15 AND \"ConcurrencyStamp\" = @p16;" (0723d8ff)
+2020-12-13T15:43:57.4699303+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@__normalizedRoleName_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ConcurrencyStamp\", a.\"Name\", a.\"NormalizedName\"
+FROM \"AspNetRoles\" AS a
+WHERE a.\"NormalizedName\" = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2020-12-13T15:43:57.6325768+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserId\", a.\"RoleId\"
+FROM \"AspNetUserRoles\" AS a
+WHERE (a.\"UserId\" = @__p_0) AND (a.\"RoleId\" = @__p_1)
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:57.7980832+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@__normalizedRoleName_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ConcurrencyStamp\", a.\"Name\", a.\"NormalizedName\"
+FROM \"AspNetRoles\" AS a
+WHERE a.\"NormalizedName\" = @__normalizedRoleName_0
+LIMIT 2" (0723d8ff)
+2020-12-13T15:43:57.9510268+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("145"ms) [Parameters=["@__normalizedUserName_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:58.0975851+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@__normalizedEmail_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2020-12-13T15:43:58.2762584+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p17='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?', @p18='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?', @p10='?', @p11='?', @p12='?', @p13='?' (DbType = Boolean), @p14='?', @p15='?' (DbType = Boolean), @p16='?'"], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM \"AspNetUserRoles\"
+WHERE \"RoleId\" = @p0 AND \"UserId\" = @p1;
+UPDATE \"AspNetUsers\" SET \"AccessFailedCount\" = @p2, \"ConcurrencyStamp\" = @p3, \"Email\" = @p4, \"EmailConfirmed\" = @p5, \"Image\" = @p6, \"LockoutEnabled\" = @p7, \"LockoutEnd\" = @p8, \"NormalizedEmail\" = @p9, \"NormalizedUserName\" = @p10, \"PasswordHash\" = @p11, \"PhoneNumber\" = @p12, \"PhoneNumberConfirmed\" = @p13, \"SecurityStamp\" = @p14, \"TwoFactorEnabled\" = @p15, \"UserName\" = @p16
+WHERE \"Id\" = @p17 AND \"ConcurrencyStamp\" = @p18;" (0723d8ff)
+2020-12-13T15:43:58.4401053+03:00 0HM4VCIH0U3L2:00000002 [INF] Executing RedirectResult, redirecting to "/admin/roles". (d98d540e)
+2020-12-13T15:43:58.4404850+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed action "HeritageWebApplication.Areas.Admin.Controllers.RolesController.Edit (HeritageWebApplication)" in 2348.5951ms (afa2e885)
+2020-12-13T15:43:58.4405999+03:00 0HM4VCIH0U3L2:00000002 [INF] Executed endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Edit (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:58.4412760+03:00 0HM4VCIH0U3L2:00000002 [INF] Request finished in 2357.0514ms 302  (791a596a)
+2020-12-13T15:43:58.4516824+03:00 0HM4VCIH0U3L2:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44327/admin/roles   (ca22a1cb)
+2020-12-13T15:43:58.4530837+03:00 0HM4VCIH0U3L2:00000003 [INF] Executing endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:43:58.4533503+03:00 0HM4VCIH0U3L2:00000003 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Roles\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "HeritageWebApplication.Areas.Admin.Controllers.RolesController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:43:58.4536650+03:00 0HM4VCIH0U3L2:00000003 [INF] Authorization was successful. (0d575a54)
+2020-12-13T15:43:58.4543449+03:00 0HM4VCIH0U3L2:00000003 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:43:58.6013642+03:00 0HM4VCIH0U3L2:00000003 [INF] Executed DbCommand ("146"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Id\" = @__p_0
+LIMIT 1" (0723d8ff)
+2020-12-13T15:43:58.7499051+03:00 0HM4VCIH0U3L2:00000003 [INF] Executed DbCommand ("147"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a" (0723d8ff)
+2020-12-13T15:43:58.7527002+03:00 0HM4VCIH0U3L2:00000003 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:43:58.7592864+03:00 0HM4VCIH0U3L2:00000003 [INF] Executed ViewResult - view "Index" executed in 6.8267ms. (f66409e9)
+2020-12-13T15:43:58.7598663+03:00 0HM4VCIH0U3L2:00000003 [INF] Executed action "HeritageWebApplication.Areas.Admin.Controllers.RolesController.Index (HeritageWebApplication)" in 306.4303ms (afa2e885)
+2020-12-13T15:43:58.7600973+03:00 0HM4VCIH0U3L2:00000003 [INF] Executed endpoint '"HeritageWebApplication.Areas.Admin.Controllers.RolesController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:43:58.7604482+03:00 0HM4VCIH0U3L2:00000003 [INF] Request finished in 308.8033ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:43:58.7988554+03:00 0HM4VCIH0U3L2:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:43:58.7995301+03:00 0HM4VCIH0U3L2:00000004 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:43:58.8008958+03:00 0HM4VCIH0U3L2:00000004 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:43:58.8010112+03:00 0HM4VCIH0U3L2:00000004 [INF] Request finished in 2.1775ms 200 application/json (791a596a)
+2020-12-13T15:43:58.8082039+03:00 0HM4VCIH0U3L2:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=-dq1N9az4NWAj9NMBmcbjg   (ca22a1cb)
+2020-12-13T15:43:58.8085377+03:00 0HM4VCIH0U3L2:00000005 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:44:00.5117497+03:00 0HM4VCIH0U3L3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/Account/Logout   (ca22a1cb)
+2020-12-13T15:44:00.5150137+03:00 0HM4VCIH0U3L3:00000001 [INF] Executing endpoint '"HeritageWebApplication.Controllers.AccountController.Logout (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:44:00.5155611+03:00 0HM4VCIH0U3L3:00000001 [INF] Route matched with "{action = \"Logout\", controller = \"Account\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout()" on controller "HeritageWebApplication.Controllers.AccountController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:44:00.5168031+03:00 0HM4VCIH0U3L3:00000001 [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2020-12-13T15:44:00.5174246+03:00 0HM4VCIH0U3L3:00000001 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-12-13T15:44:00.5178771+03:00 0HM4VCIH0U3L3:00000001 [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2020-12-13T15:44:00.5184091+03:00 0HM4VCIH0U3L3:00000001 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-12-13T15:44:00.5186126+03:00 0HM4VCIH0U3L3:00000001 [INF] Executed action "HeritageWebApplication.Controllers.AccountController.Logout (HeritageWebApplication)" in 2.9421ms (afa2e885)
+2020-12-13T15:44:00.5186853+03:00 0HM4VCIH0U3L3:00000001 [INF] Executed endpoint '"HeritageWebApplication.Controllers.AccountController.Logout (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:44:00.5190746+03:00 0HM4VCIH0U3L3:00000001 [INF] Request finished in 7.3962ms 302  (791a596a)
+2020-12-13T15:44:00.5250217+03:00 0HM4VCIH0U3L3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44327/   (ca22a1cb)
+2020-12-13T15:44:00.5255263+03:00 0HM4VCIH0U3L3:00000002 [INF] Executing endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:44:00.5257881+03:00 0HM4VCIH0U3L3:00000002 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "HeritageWebApplication.Controllers.HomeController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:44:00.5270586+03:00 0HM4VCIH0U3L3:00000002 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:44:00.6742408+03:00 0HM4VCIH0U3L3:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT b.\"Id\", b.\"Desc\", b.\"Image\", b.\"Location\", b.\"Name\", b.\"ShortDesc\"
+FROM \"Buildings\" AS b" (0723d8ff)
+2020-12-13T15:44:00.6807401+03:00 0HM4VCIH0U3L3:00000002 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:44:00.6883713+03:00 0HM4VCIH0U3L3:00000002 [INF] Executed ViewResult - view "Index" executed in 8.4346ms. (f66409e9)
+2020-12-13T15:44:00.6885459+03:00 0HM4VCIH0U3L3:00000002 [INF] Executed action "HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)" in 162.7115ms (afa2e885)
+2020-12-13T15:44:00.6886271+03:00 0HM4VCIH0U3L3:00000002 [INF] Executed endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:44:00.6890148+03:00 0HM4VCIH0U3L3:00000002 [INF] Request finished in 163.9694ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:44:00.7030138+03:00 0HM4VCIH0U3L2:00000005 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:44:00.7031841+03:00 0HM4VCIH0U3L2:00000005 [INF] Request finished in 1894.972ms 101  (791a596a)
+2020-12-13T15:44:00.7232654+03:00 0HM4VCIH0U3L3:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/18122d89-7c41-4735-b15a-8f8f66fcd226_ratusha.jpg   (ca22a1cb)
+2020-12-13T15:44:00.7243164+03:00 0HM4VCIH0U3L4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/f2d3a666-3b53-443b-9214-ff4da5083466_house.jpg   (ca22a1cb)
+2020-12-13T15:44:00.7243907+03:00 0HM4VCIH0U3L3:00000003 [INF] Request finished in 1.2285ms 404  (791a596a)
+2020-12-13T15:44:00.7254700+03:00 0HM4VCIH0U3L4:00000001 [INF] Request finished in 1.1369ms 404  (791a596a)
+2020-12-13T15:44:00.7381682+03:00 0HM4VCIH0U3L3:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:44:00.7383511+03:00 0HM4VCIH0U3L3:00000004 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:44:00.7387775+03:00 0HM4VCIH0U3L3:00000004 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:44:00.7388957+03:00 0HM4VCIH0U3L3:00000004 [INF] Request finished in 0.7338ms 200 application/json (791a596a)
+2020-12-13T15:44:00.7465209+03:00 0HM4VCIH0U3L4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=TvJdyMy8rrPVruGNu1ByjQ   (ca22a1cb)
+2020-12-13T15:44:00.7467116+03:00 0HM4VCIH0U3L4:00000002 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:44:01.8224708+03:00 0HM4VCIH0U3L3:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44327/Account/Login   (ca22a1cb)
+2020-12-13T15:44:01.8233925+03:00 0HM4VCIH0U3L3:00000005 [INF] Executing endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:44:01.8236920+03:00 0HM4VCIH0U3L3:00000005 [INF] Route matched with "{action = \"Login\", controller = \"Account\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login(System.String)" on controller "HeritageWebApplication.Controllers.AccountController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:44:01.8249379+03:00 0HM4VCIH0U3L3:00000005 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2020-12-13T15:44:01.8291593+03:00 0HM4VCIH0U3L3:00000005 [INF] Executed ViewResult - view "Login" executed in 4.3171ms. (f66409e9)
+2020-12-13T15:44:01.8292627+03:00 0HM4VCIH0U3L3:00000005 [INF] Executed action "HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)" in 5.5263ms (afa2e885)
+2020-12-13T15:44:01.8293121+03:00 0HM4VCIH0U3L3:00000005 [INF] Executed endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:44:01.8294755+03:00 0HM4VCIH0U3L3:00000005 [INF] Request finished in 7.115ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:44:01.8364778+03:00 0HM4VCIH0U3L4:00000002 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:44:01.8365698+03:00 0HM4VCIH0U3L4:00000002 [INF] Request finished in 1090.0542ms 101  (791a596a)
+2020-12-13T15:44:01.8551444+03:00 0HM4VCIH0U3L3:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:44:01.8555793+03:00 0HM4VCIH0U3L3:00000006 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:44:01.8559526+03:00 0HM4VCIH0U3L3:00000006 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:44:01.8560071+03:00 0HM4VCIH0U3L3:00000006 [INF] Request finished in 0.9088ms 200 application/json (791a596a)
+2020-12-13T15:44:01.8685974+03:00 0HM4VCIH0U3L3:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=yhJ7YT3UTjFkh-ukQbk3CA   (ca22a1cb)
+2020-12-13T15:44:01.8688064+03:00 0HM4VCIH0U3L3:00000007 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:44:10.7180642+03:00 0HM4VCIH0U3L5:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44327/Account/Login application/x-www-form-urlencoded 239 (ca22a1cb)
+2020-12-13T15:44:10.7186840+03:00 0HM4VCIH0U3L5:00000001 [INF] Executing endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:44:10.7192218+03:00 0HM4VCIH0U3L5:00000001 [INF] Route matched with "{action = \"Login\", controller = \"Account\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HeritageWebApplication.ViewModels.LoginViewModel)" on controller "HeritageWebApplication.Controllers.AccountController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:44:10.7221257+03:00 0HM4VCIH0U3L5:00000001 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:44:10.8707996+03:00 0HM4VCIH0U3L5:00000001 [INF] Executed DbCommand ("148"ms) [Parameters=["@__normalizedEmail_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"Image\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2020-12-13T15:44:11.0386119+03:00 0HM4VCIH0U3L5:00000001 [INF] Executed DbCommand ("147"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM \"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2020-12-13T15:44:11.1862867+03:00 0HM4VCIH0U3L5:00000001 [INF] Executed DbCommand ("146"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM \"AspNetUserRoles\" AS a
+INNER JOIN \"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2020-12-13T15:44:11.1870608+03:00 0HM4VCIH0U3L5:00000001 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-12-13T15:44:11.1874387+03:00 0HM4VCIH0U3L5:00000001 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-12-13T15:44:11.1875467+03:00 0HM4VCIH0U3L5:00000001 [INF] Executed action "HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)" in 468.2097ms (afa2e885)
+2020-12-13T15:44:11.1875784+03:00 0HM4VCIH0U3L5:00000001 [INF] Executed endpoint '"HeritageWebApplication.Controllers.AccountController.Login (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:44:11.1878174+03:00 0HM4VCIH0U3L5:00000001 [INF] Request finished in 469.8152ms 302  (791a596a)
+2020-12-13T15:44:11.1933036+03:00 0HM4VCIH0U3L5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44327/   (ca22a1cb)
+2020-12-13T15:44:11.1941256+03:00 0HM4VCIH0U3L5:00000002 [INF] Executing endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:44:11.1942876+03:00 0HM4VCIH0U3L5:00000002 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "HeritageWebApplication.Controllers.HomeController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:44:11.1945692+03:00 0HM4VCIH0U3L5:00000002 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:44:11.3404429+03:00 0HM4VCIH0U3L5:00000002 [INF] Executed DbCommand ("146"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT b.\"Id\", b.\"Desc\", b.\"Image\", b.\"Location\", b.\"Name\", b.\"ShortDesc\"
+FROM \"Buildings\" AS b" (0723d8ff)
+2020-12-13T15:44:11.3423106+03:00 0HM4VCIH0U3L5:00000002 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:44:11.3479189+03:00 0HM4VCIH0U3L5:00000002 [INF] Executed ViewResult - view "Index" executed in 6.153ms. (f66409e9)
+2020-12-13T15:44:11.3480596+03:00 0HM4VCIH0U3L5:00000002 [INF] Executed action "HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)" in 153.7268ms (afa2e885)
+2020-12-13T15:44:11.3481399+03:00 0HM4VCIH0U3L5:00000002 [INF] Executed endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:44:11.3484215+03:00 0HM4VCIH0U3L5:00000002 [INF] Request finished in 155.0994ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:44:11.3707526+03:00 0HM4VCIH0U3L3:00000007 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:44:11.3708258+03:00 0HM4VCIH0U3L3:00000007 [INF] Request finished in 9502.2482ms 101  (791a596a)
+2020-12-13T15:44:11.3842622+03:00 0HM4VCIH0U3L5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/f2d3a666-3b53-443b-9214-ff4da5083466_house.jpg   (ca22a1cb)
+2020-12-13T15:44:11.3855543+03:00 0HM4VCIH0U3L6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/18122d89-7c41-4735-b15a-8f8f66fcd226_ratusha.jpg   (ca22a1cb)
+2020-12-13T15:44:11.3859741+03:00 0HM4VCIH0U3L5:00000003 [INF] Request finished in 1.5105ms 404  (791a596a)
+2020-12-13T15:44:11.3863721+03:00 0HM4VCIH0U3L6:00000001 [INF] Request finished in 0.8632ms 404  (791a596a)
+2020-12-13T15:44:11.3969238+03:00 0HM4VCIH0U3L5:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:44:11.3973218+03:00 0HM4VCIH0U3L5:00000004 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:44:11.3977484+03:00 0HM4VCIH0U3L5:00000004 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:44:11.3978210+03:00 0HM4VCIH0U3L5:00000004 [INF] Request finished in 0.9122ms 200 application/json (791a596a)
+2020-12-13T15:44:11.4047702+03:00 0HM4VCIH0U3L6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=eN0Hi6VSkkBo2Z92FA1XqA   (ca22a1cb)
+2020-12-13T15:44:11.4051015+03:00 0HM4VCIH0U3L6:00000002 [INF] Executing endpoint '"/chat"' (500cc934)
+2020-12-13T15:44:13.3352332+03:00 0HM4VCIH0U3L5:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44327/   (ca22a1cb)
+2020-12-13T15:44:13.3363484+03:00 0HM4VCIH0U3L5:00000005 [INF] Executing endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (500cc934)
+2020-12-13T15:44:13.3366791+03:00 0HM4VCIH0U3L5:00000005 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "HeritageWebApplication.Controllers.HomeController" ("HeritageWebApplication"). (122b2fdf)
+2020-12-13T15:44:13.3375897+03:00 0HM4VCIH0U3L5:00000005 [INF] Entity Framework Core "5.0.0" initialized '"ApplicationDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2020-12-13T15:44:13.4835072+03:00 0HM4VCIH0U3L5:00000005 [INF] Executed DbCommand ("145"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT b.\"Id\", b.\"Desc\", b.\"Image\", b.\"Location\", b.\"Name\", b.\"ShortDesc\"
+FROM \"Buildings\" AS b" (0723d8ff)
+2020-12-13T15:44:13.4848137+03:00 0HM4VCIH0U3L5:00000005 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-13T15:44:13.4902658+03:00 0HM4VCIH0U3L5:00000005 [INF] Executed ViewResult - view "Index" executed in 5.5948ms. (f66409e9)
+2020-12-13T15:44:13.4904599+03:00 0HM4VCIH0U3L5:00000005 [INF] Executed action "HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)" in 153.6855ms (afa2e885)
+2020-12-13T15:44:13.4906034+03:00 0HM4VCIH0U3L5:00000005 [INF] Executed endpoint '"HeritageWebApplication.Controllers.HomeController.Index (HeritageWebApplication)"' (99874f2b)
+2020-12-13T15:44:13.4912064+03:00 0HM4VCIH0U3L5:00000005 [INF] Request finished in 155.9058ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-13T15:44:13.5008985+03:00 0HM4VCIH0U3L6:00000002 [INF] Executed endpoint '"/chat"' (99874f2b)
+2020-12-13T15:44:13.5012342+03:00 0HM4VCIH0U3L6:00000002 [INF] Request finished in 2096.3569ms 101  (791a596a)
+2020-12-13T15:44:13.5160736+03:00 0HM4VCIH0U3L5:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/f2d3a666-3b53-443b-9214-ff4da5083466_house.jpg   (ca22a1cb)
+2020-12-13T15:44:13.5170820+03:00 0HM4VCIH0U3L7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44327/img/heritageObjects/18122d89-7c41-4735-b15a-8f8f66fcd226_ratusha.jpg   (ca22a1cb)
+2020-12-13T15:44:13.5181247+03:00 0HM4VCIH0U3L5:00000006 [INF] Request finished in 2.1137ms 404  (791a596a)
+2020-12-13T15:44:13.5181246+03:00 0HM4VCIH0U3L7:00000001 [INF] Request finished in 0.9882ms 404  (791a596a)
+2020-12-13T15:44:13.5259770+03:00 0HM4VCIH0U3L7:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44327/chat/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2020-12-13T15:44:13.5278383+03:00 0HM4VCIH0U3L7:00000002 [INF] Executing endpoint '"/chat/negotiate"' (500cc934)
+2020-12-13T15:44:13.5285485+03:00 0HM4VCIH0U3L7:00000002 [INF] Executed endpoint '"/chat/negotiate"' (99874f2b)
+2020-12-13T15:44:13.5288658+03:00 0HM4VCIH0U3L7:00000002 [INF] Request finished in 2.9188ms 200 application/json (791a596a)
+2020-12-13T15:44:13.5359819+03:00 0HM4VCIH0U3L5:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44327/chat?id=y9ePjOOAdIWd6d6Jvd954A   (ca22a1cb)
+2020-12-13T15:44:13.5366310+03:00 0HM4VCIH0U3L5:00000007 [INF] Executing endpoint '"/chat"' (500cc934)
