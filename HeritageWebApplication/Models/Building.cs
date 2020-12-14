@@ -15,5 +15,7 @@ namespace HeritageWebApplication.Models
         public string Desc { get; set; }
         
         public List<HeritageObject> HeritageObjects { get; set; }
+        
+        public List<RenovationCompany> RenovationCompanies { get; set; }
     }
 }

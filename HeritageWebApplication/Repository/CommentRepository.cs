@@ -21,8 +21,8 @@ namespace HeritageWebApplication.Repository
             List <Comment> _comments = new List<Comment>();
             _comments = _context.Comments.ToList();
             return _comments; 
-        }  
-        
+        }
+
         public Comment Get(int id)  
         {  
             var _comment = _context.Comments.FirstOrDefault(t => t.Id == id);

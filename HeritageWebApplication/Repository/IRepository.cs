@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using HeritageWebApplication.Models;
 
 namespace HeritageWebApplication.Repository
 {

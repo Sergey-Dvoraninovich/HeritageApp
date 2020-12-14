@@ -48,6 +48,7 @@ namespace HeritageWebApplication
             services.AddScoped<IRepository<Building>, BuildingRepository>();
             services.AddScoped<IRepository<HeritageObject>, HeritageObjectRepository>();
             services.AddScoped<IRepository<Comment>, CommentRepository>();
+            services.AddScoped<IRepository<RenovationCompany>, RenovationRepository>();
             services.AddScoped<IDataManager, DataManager>();
             services.AddTransient<IImageService, ImageService>();
             
@@ -71,13 +72,12 @@ namespace HeritageWebApplication
             //Other
             services.AddMvc();
             services.AddControllers();
-            services.AddTransient<ITestHeritage, TesterHeritage>();
             services.AddControllersWithViews();
-            
+            services.AddSignalR();
+            services.AddSingleton<IInfoService, InfoService>();
             services.AddScoped<IEmailService>(t => new EmailService(
                 MailConfig.Sender, MailConfig.SmtpServer, MailConfig.SmtpPort, MailConfig.Username, MailConfig.Password
             ));
-            
             services.AddLogging(opt =>
             {
                 opt.AddConsole();
@@ -95,9 +95,6 @@ namespace HeritageWebApplication
                     options.Conventions.Add(new AdminAreaAuth("Admin", "AdminArea"));
                 })
                 .AddSessionStateTempDataProvider();
-            
-            services.AddSignalR();
-            services.AddSingleton<IInfoService, InfoService>();
 
         }
         
@@ -111,8 +108,7 @@ namespace HeritageWebApplication
             {
                 app.UseStatusCodePagesWithRedirects("/error/{0}");
             }
-
-            //app.UseDefaultFiles();
+            
             app.UseStaticFiles();
             app.UseHttpsRedirection();
 
@@ -126,7 +122,6 @@ namespace HeritageWebApplication
             {
                 endpoints.MapControllerRoute("default", pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("admin", "{area:exists}/{controller=models}/{action=index}");
-                //endpoints.MapHub<MessageHub>("/MessageHub");
                 endpoints.MapHub<ChatHub>("/chat");
                 endpoints.MapDefaultControllerRoute();
             });

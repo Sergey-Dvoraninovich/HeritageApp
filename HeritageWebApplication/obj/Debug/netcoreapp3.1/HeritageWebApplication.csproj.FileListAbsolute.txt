@@ -90,5 +90,12 @@ C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplicatio
 C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\Index.cshtml.g.cs
 C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\EditUserData.cshtml.g.cs
-C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Test\Index.cshtml.g.cs
 C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Account\Redirect.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Company\Create.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Company\Edit.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Company\Index.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\CompanyProcess\Add.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\CompanyProcess\Show.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Programs\Detail.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Programs\Index.cshtml.g.cs
+C:\Users\Сергей\RiderProjects\HeritageWebApplication\HeritageWebApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\CompanyProcess\Remove.cshtml.g.cs

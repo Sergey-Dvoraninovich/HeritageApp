@@ -51,11 +51,14 @@
             <e p="Controllers" t="Include">
               <e p="BuildingController.cs" t="Include" />
               <e p="CommentController.cs" t="Include" />
+              <e p="CompanyController.cs" t="Include" />
+              <e p="CompanyProcessController.cs" t="Include" />
               <e p="HeritageObjectController.cs" t="Include" />
               <e p="RolesController.cs" t="Include" />
               <e p="UsersController.cs" t="Include" />
             </e>
             <e p="ViewModels" t="Include">
+              <e p="AddBuildingViewModel.cs" t="Include" />
               <e p="ChangeRoleVIewModel.cs" t="Include" />
               <e p="CommentAdminViewModel.cs" t="Include" />
               <e p="CreateBuildingViewModel.cs" t="Include" />
@@ -64,6 +67,7 @@
               <e p="EditBuildingViewModel.cs" t="Include" />
               <e p="EditHeritageObjectViewModel.cs" t="Include" />
               <e p="EditUserViewModel.cs" t="Include" />
+              <e p="RenovationViewModel.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
               <e p="_ViewImports.cshtml" t="Include" />
@@ -76,6 +80,16 @@
                 <e p="create.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Company" t="Include">
+                <e p="create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="CompanyProcess" t="Include">
+                <e p="Add.cshtml" t="Include" />
+                <e p="Remove.cshtml" t="Include" />
+                <e p="Show.cshtml" t="Include" />
               </e>
               <e p="HeritageObject" t="Include">
                 <e p="create.cshtml" t="Include" />
@@ -100,19 +114,20 @@
           <e p="ErrorController.cs" t="Include" />
           <e p="HeritageCommentController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
-          <e p="TestController.cs" t="Include" />
+          <e p="ProgramsController.cs" t="Include" />
         </e>
         <e p="HeritageWebApplication.csproj" t="IncludeRecursive" />
         <e p="MailConfig.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20201211080648_'newname'.cs" t="Include" />
-          <e p="20201211080648_'newname'.Designer.cs" t="Include" />
+          <e p="20201213182718_'name_new5'.cs" t="Include" />
+          <e p="20201213182718_'name_new5'.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="Building.cs" t="Include" />
           <e p="Comment.cs" t="Include" />
           <e p="HeritageObject.cs" t="Include" />
+          <e p="RenovationCompany.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="UserRole.cs" t="Include" />
         </e>
@@ -135,6 +150,7 @@
           <e p="HeritageObjectRepository.cs" t="Include" />
           <e p="IDataManager.cs" t="Include" />
           <e p="Irepository.cs" t="Include" />
+          <e p="RenovationRepository.cs" t="Include" />
         </e>
         <e p="Services" t="Include">
           <e p="EmailService.cs" t="Include" />
@@ -143,8 +159,6 @@
           <e p="IInfoService.cs" t="Include" />
           <e p="ImageService.cs" t="Include" />
           <e p="InfoService.cs" t="Include" />
-          <e p="ITestHeritage.cs" t="Include" />
-          <e p="TesterHeritage.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="ViewModels" t="Include">
@@ -177,12 +191,13 @@
             <e p="EditUserData.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
+          <e p="Programs" t="Include">
+            <e p="Detail.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="CssShared.cshtml" t="Include" />
-          </e>
-          <e p="Test" t="Include">
-            <e p="Index.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">
@@ -193,9 +208,13 @@
               <e p="044edcca-cfe8-4cf1-aff2-a63ef909921a_colors.jpg" t="Include" />
               <e p="0535a09a-c40a-4ce4-9c8b-55f8dd9403ef_fdaff62153776e975ab1e48a1cabb3bb.jpg" t="Include" />
               <e p="180375d2-8bab-456a-af5b-432c5c45b0b8_divider-clipart-blue-3.png" t="Include" />
+              <e p="1ae0214a-d1a2-4d31-98f7-49ec9c238123_delete.png" t="Include" />
+              <e p="1d1ff397-540a-47e9-a120-610877e65a1d_colors.jpg" t="Include" />
               <e p="1eaf3997-45d5-4352-b61f-8e0ad50447b0_house.jpg" t="Include" />
               <e p="2271d9cc-f56f-4d39-80e0-71ae52d16748_nastol.com.ua-225408.jpg" t="Include" />
               <e p="298110c7-eaa7-4e36-b791-4042f77b9047_mozaika.jpg" t="Include" />
+              <e p="2df14ee7-cb98-43f3-83f7-d4a0c77098b7_colors.jpg" t="Include" />
+              <e p="3bf3dfc8-0cba-4576-8cc2-6dca12247f39_colors.jpg" t="Include" />
               <e p="418c6408-0cdd-453a-82aa-fd2f8f969a3d_a1d37d6b96758b88245ac0c5c02ff4d8.jpg" t="Include" />
               <e p="42397673-4333-421e-b97a-789e7b07512f_05a4cb9475a8e35f9309492361021a86.jpg" t="Include" />
               <e p="42daf708-8164-4ce0-94e9-cd7133ac9fcb_colors.jpg" t="Include" />
@@ -204,17 +223,28 @@
               <e p="53451a15-4a9c-41b6-956f-2c23f893cab1_colors.jpg" t="Include" />
               <e p="55452d20-7db7-4c5d-976d-7c71803742cd_Account1-removebg-preview.png" t="Include" />
               <e p="555bb36d-2403-458d-9007-d59bf087d36a_ad0ef618d434f4146296f5e8d8a89350.jpg" t="Include" />
+              <e p="6701d9fd-df98-4c0d-9357-77ba06b15bfa_1684_oooo.plus.png" t="Include" />
               <e p="67784896-efab-464d-9123-43441c185579_colors.jpg" t="Include" />
+              <e p="680e0915-bebe-4ebd-96d6-7b0ad6d3e73b_razm.jpg" t="Include" />
               <e p="6d9e5472-95b2-4fa1-8674-fd028a3432cd_house.jpg" t="Include" />
               <e p="6f3ba1f5-f78f-4033-a4ce-4344a5812119_ratusha.jpg" t="Include" />
+              <e p="73528b7e-eb3c-40c9-80ce-11d041a6b299_colors.jpg" t="Include" />
+              <e p="7865606e-49a6-4632-bfe2-582ae538e9fb_Account_v2.jpg" t="Include" />
+              <e p="7a35286d-1607-4e36-8655-f8a732ca4db4_colors.jpg" t="Include" />
               <e p="7edef934-8386-424a-8740-dc1d3644b1b2_nastol.com.ua-225408.jpg" t="Include" />
+              <e p="8085108c-19cb-4c49-aeb8-27175e3cc44c_account.jpg" t="Include" />
               <e p="8b1b06dd-b760-4f4b-90de-0e88d04c0fb1_cycle.png" t="Include" />
+              <e p="a0981805-d8c3-4302-afa3-81b8596721c3_calmdown.png" t="Include" />
               <e p="ab8b88d3-67ef-4cd0-b2b7-50999be6afcc_house.jpg" t="Include" />
               <e p="af8d8953-5fed-4fb1-a55f-8d718faf6f4d_Account1-removebg-preview.png" t="Include" />
+              <e p="afaaf731-6082-46c8-b8ab-f55b1084c544_colors.jpg" t="Include" />
+              <e p="bb237c45-bd87-4f4f-ae3c-f05bf3840bcb_colors.jpg" t="Include" />
+              <e p="bde8d3b2-9bc5-4237-89b4-2aabd95ef883_currency.png" t="Include" />
               <e p="d3adc3fd-1aa0-4551-b15f-bba3d31173a5_92_oooo.plus.png" t="Include" />
               <e p="e671f564-df77-48cf-baec-4282c74b6d37_house.jpg" t="Include" />
               <e p="e7f33bec-6694-47ce-a9b6-b9a803d04eab_house.jpg" t="Include" />
               <e p="eb2b8bbd-c15f-4b02-9034-abe4ffa33126_Account1-removebg-preview.png" t="Include" />
+              <e p="f2bfe61d-2730-4a1a-9577-5f32b6a6ab39_colors.jpg" t="Include" />
               <e p="f781b165-81af-4115-a722-62d97207e1ec_32328e4bb7ec2330705f08efa947ce28.jpg" t="Include" />
               <e p="f7a00e1a-e9d2-4b2a-a165-3add11b532de_currency.png" t="Include" />
               <e p="f826b1aa-0ba8-416f-9876-f675c330558b_92_oooo.plus.png" t="Include" />
@@ -224,8 +254,11 @@
             <e p="all-20201210.log" t="Include" />
             <e p="all-20201211.log" t="Include" />
             <e p="all-20201213.log" t="Include" />
+            <e p="all-20201214.log" t="Include" />
             <e p="error-20201210.log" t="Include" />
             <e p="error-20201211.log" t="Include" />
+            <e p="error-20201213.log" t="Include" />
+            <e p="error-20201214.log" t="Include" />
           </e>
         </e>
       </e>

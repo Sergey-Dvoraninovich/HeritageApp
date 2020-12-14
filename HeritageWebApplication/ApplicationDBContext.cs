@@ -10,6 +10,7 @@ namespace HeritageWebApplication
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<HeritageObject> HeritageObjects { get; set; }
+        public DbSet<RenovationCompany> RenovationCompanies { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         
@@ -31,6 +32,11 @@ namespace HeritageWebApplication
                 .HasOne(u => u.User)
                 .WithMany(h => h.Comments)
                 .HasForeignKey(u => u.UserId);
+            
+            modelBuilder.Entity<Building>()
+                .HasMany(b => b.RenovationCompanies)
+                .WithMany(r => r.Buildings)
+                .UsingEntity(b => b.ToTable("CompanyBuilding"));
             
             modelBuilder.Entity<UserRole>().HasData(new UserRole()
             {

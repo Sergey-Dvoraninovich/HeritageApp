@@ -1,0 +1,24 @@
+﻿@model IEnumerable<HeritageWebApplication.Models.RenovationCompany>
+
+@{
+    ViewBag.Title = "Список Программ";
+}
+
+<a href="~/Admin/Company/Create">Добавить Программу</a>
+@{
+    Layout = "_Layout";
+} 
+<div>
+    @foreach (var renovation in Model)
+    {
+        <p><h1>@renovation.Name</h1></p>
+        <p>@renovation.Desc</p>
+        <a class="draw-outline draw-outline--tandem" href="/admin/companyprocess/show?id=@renovation.Id">Просмотр</a>
+        <p>
+            <form action="/admin/company/delete?id=@renovation.Id" method="post">
+                <a class="draw-outline draw-outline--tandem" href="/admin/company/edit?id=@renovation.Id">Edit</a>
+                <button class="draw-outline draw-outline--tandem" type="submit"> Delete </button>
+            </form>
+        </p>
+    }
+</div>

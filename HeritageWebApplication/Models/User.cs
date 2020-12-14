@@ -9,5 +9,7 @@ namespace HeritageWebApplication.Models
         //public string UserName { get; set; }
         public string Image { get; set; }
         public List<Comment> Comments { get; set; }
+        
+        public List<Building> Buildings { get; set; }
     }
 }

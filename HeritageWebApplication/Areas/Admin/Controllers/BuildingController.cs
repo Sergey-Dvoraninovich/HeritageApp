@@ -57,6 +57,7 @@ namespace HeritageWebApplication.Areas.Admin.Controllers
                 building.ShortDesc = model.ShortDesc;
                 building.Location = model.Location;
                 building.Desc = model.Desc;
+                building.RenovationCompanies = new List<RenovationCompany>();
                 _manager.BuildingRepository.Save(building);
                 return Redirect("/admin/building");
                 

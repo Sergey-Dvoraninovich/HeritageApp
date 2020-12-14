@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HeritageWebApplication.Migrations
 {
-    public partial class newname : Migration
+    public partial class name_new5 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,20 +51,18 @@ namespace HeritageWebApplication.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Buildings",
+                name: "RenovationCompanies",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: true),
-                    Image = table.Column<string>(type: "text", nullable: true),
-                    Location = table.Column<string>(type: "text", nullable: true),
-                    ShortDesc = table.Column<string>(type: "text", nullable: true),
-                    Desc = table.Column<string>(type: "text", nullable: true)
+                    Desc = table.Column<string>(type: "text", nullable: true),
+                    value = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Buildings", x => x.Id);
+                    table.PrimaryKey("PK_RenovationCompanies", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -174,6 +172,54 @@ namespace HeritageWebApplication.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Buildings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Image = table.Column<string>(type: "text", nullable: true),
+                    Location = table.Column<string>(type: "text", nullable: true),
+                    ShortDesc = table.Column<string>(type: "text", nullable: true),
+                    Desc = table.Column<string>(type: "text", nullable: true),
+                    UserId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Buildings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Buildings_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CompanyBuilding",
+                columns: table => new
+                {
+                    BuildingsId = table.Column<int>(type: "integer", nullable: false),
+                    RenovationCompaniesId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CompanyBuilding", x => new { x.BuildingsId, x.RenovationCompaniesId });
+                    table.ForeignKey(
+                        name: "FK_CompanyBuilding_Buildings_BuildingsId",
+                        column: x => x.BuildingsId,
+                        principalTable: "Buildings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CompanyBuilding_RenovationCompanies_RenovationCompaniesId",
+                        column: x => x.RenovationCompaniesId,
+                        principalTable: "RenovationCompanies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "HeritageObjects",
                 columns: table => new
                 {
@@ -231,14 +277,14 @@ namespace HeritageWebApplication.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { 1, "bb684a51-a45e-4009-8846-0ef46e585add", "admin", "ADMIN" },
-                    { 2, "24a148ce-7b39-42e6-8072-ab8c826260e1", "user", "USER" }
+                    { 1, "42ac3451-2a44-44e6-89a7-1565ca8af1ce", "admin", "ADMIN" },
+                    { 2, "821033ca-21d6-466a-9a1b-ac9ac52731d7", "user", "USER" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "Image", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { 1, 0, "6093686d-fc79-43f0-8e63-52ca4694e0de", "heritage.app.admin@gmail.com", true, null, false, null, "HERITAGE.APP.ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEJly4EZLYJ/hO4oUx3XHKE7TdhPwzqlV4ZTGQN5aOzB2nlFOEbVJH145oifsxuLsfg==", null, false, "", false, "admin" });
+                values: new object[] { 1, 0, "be28c19f-3d40-4d1f-a709-52518a5d5e96", "heritage.app.admin@gmail.com", true, null, false, null, "HERITAGE.APP.ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAELLO6LKbjAGC1Ug/qO6Isdham0sbJV7Ng0gjiAwtdrod081V7cw7jBfTO3zlEZ/Dvw==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
@@ -283,6 +329,11 @@ namespace HeritageWebApplication.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Buildings_UserId",
+                table: "Buildings",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Comments_HeritageObjectId",
                 table: "Comments",
                 column: "HeritageObjectId");
@@ -291,6 +342,11 @@ namespace HeritageWebApplication.Migrations
                 name: "IX_Comments_UserId",
                 table: "Comments",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CompanyBuilding_RenovationCompaniesId",
+                table: "CompanyBuilding",
+                column: "RenovationCompaniesId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HeritageObjects_BuildingId",
@@ -319,16 +375,22 @@ namespace HeritageWebApplication.Migrations
                 name: "Comments");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "CompanyBuilding");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "HeritageObjects");
 
             migrationBuilder.DropTable(
+                name: "RenovationCompanies");
+
+            migrationBuilder.DropTable(
                 name: "Buildings");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
         }
     }
 }

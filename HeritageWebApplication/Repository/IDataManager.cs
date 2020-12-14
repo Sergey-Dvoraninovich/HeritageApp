@@ -7,5 +7,6 @@ namespace HeritageWebApplication.Repository
         IRepository<Building> BuildingRepository { get; set; }
         IRepository<HeritageObject> HeritageObjectRepository { get; set; }
         IRepository<Comment> CommentRepository { get; set; }
+        IRepository<RenovationCompany> RenovatoinCompanyRepository { get; set; }
     }
 }

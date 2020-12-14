@@ -18,13 +18,13 @@ namespace HeritageWebApplication.Repository
         public List<Building> GetAll()
         {
             List <Building> _buildings = new List<Building>();
-            _buildings = _context.Buildings.ToList();
+            _buildings = _context.Buildings.Include(b => b.RenovationCompanies).ToList();
             return _buildings; 
-        }  
-        
+        }
+
         public Building Get(int id)  
         {  
-            var _building = _context.Buildings.FirstOrDefault(t => t.Id == id);
+            var _building = _context.Buildings.Include(b => b.RenovationCompanies).FirstOrDefault(t => t.Id == id);
             return _building;
         }
 
@@ -36,7 +36,7 @@ namespace HeritageWebApplication.Repository
 
         public void Save(Building building)
         {
-            _context.Buildings.Add(building);
+            _context.Add(building);
             _context.SaveChanges();
         }
     

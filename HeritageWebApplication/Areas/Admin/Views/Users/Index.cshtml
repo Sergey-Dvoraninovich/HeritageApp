@@ -7,7 +7,7 @@
 }
 <p> Информация начиная с @ViewBag.time </p>
 <table class="table">
-    <tr><th>Email</th><th>Год</th><th></th></tr>
+    <tr><th>Email</th><th></th><th></th></tr>
     @foreach (var user in Model)
     {
         @if (user.Email != @ViewBag.userMail)

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<HeritageWebApplication.Models.RenovationCompany>
+
+@{
+    ViewBag.Title = "Список Программ";
+}
+@{
+    Layout = "_Layout";
+} 
+<div>
+    @foreach (var renovation in Model)
+    {
+        <p><h1>@renovation.Name</h1></p>
+        <p>@renovation.Desc</p>
+        <a class="draw-outline draw-outline--tandem" href="/programs/detail?id=@renovation.Id">Просмотр</a>
+    }
+</div>

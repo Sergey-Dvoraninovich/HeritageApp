@@ -18,8 +18,8 @@ namespace HeritageWebApplication.Repository
             List <HeritageObject> _heritages = new List<HeritageObject>();
             _heritages = _context.HeritageObjects.ToList();
             return _heritages; 
-        }  
-        
+        }
+
         public HeritageObject Get(int id)  
         {  
             var _heritage = _context.HeritageObjects.FirstOrDefault(t => t.Id == id);

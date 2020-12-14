@@ -1,0 +1,26 @@
+﻿@using HeritageWebApplication.Models
+@model HeritageWebApplication.Models.RenovationCompany
+
+@{
+    Layout = "_Layout";
+} 
+<div>
+    <p><h1>@Model.Name</h1></p>
+        <p>@Model.Desc</p>
+        <a class="draw-outline draw-outline--tandem" href="/admin/companyprocess/add?id=@Model.Id">Add building</a>
+        <a class="draw-outline draw-outline--tandem" href="/admin/companyprocess/remove?id=@Model.Id">Remove building</a>
+    @{
+        if (@ViewBag.Buildings != null)
+        {
+            foreach (Building building in @ViewBag.Buildings)
+            {
+                <p><h1>@building.Name</h1></p>
+                if (@building.Image != null)
+                {
+                    <img src="~/img/heritageObjects/@building.Image" width="360" height="360">
+                }
+            }
+        }
+
+    }
+</div>

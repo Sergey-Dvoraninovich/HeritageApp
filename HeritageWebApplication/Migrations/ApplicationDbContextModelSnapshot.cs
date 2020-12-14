@@ -19,6 +19,21 @@ namespace HeritageWebApplication.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("BuildingRenovationCompany", b =>
+                {
+                    b.Property<int>("BuildingsId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("RenovationCompaniesId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("BuildingsId", "RenovationCompaniesId");
+
+                    b.HasIndex("RenovationCompaniesId");
+
+                    b.ToTable("CompanyBuilding");
+                });
+
             modelBuilder.Entity("HeritageWebApplication.Models.Building", b =>
                 {
                     b.Property<int>("Id")
@@ -41,7 +56,12 @@ namespace HeritageWebApplication.Migrations
                     b.Property<string>("ShortDesc")
                         .HasColumnType("text");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Buildings");
                 });
@@ -107,6 +127,27 @@ namespace HeritageWebApplication.Migrations
                     b.HasIndex("BuildingId");
 
                     b.ToTable("HeritageObjects");
+                });
+
+            modelBuilder.Entity("HeritageWebApplication.Models.RenovationCompany", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .UseIdentityByDefaultColumn();
+
+                    b.Property<string>("Desc")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<int>("value")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RenovationCompanies");
                 });
 
             modelBuilder.Entity("HeritageWebApplication.Models.User", b =>
@@ -182,13 +223,13 @@ namespace HeritageWebApplication.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6093686d-fc79-43f0-8e63-52ca4694e0de",
+                            ConcurrencyStamp = "be28c19f-3d40-4d1f-a709-52518a5d5e96",
                             Email = "heritage.app.admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "HERITAGE.APP.ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJly4EZLYJ/hO4oUx3XHKE7TdhPwzqlV4ZTGQN5aOzB2nlFOEbVJH145oifsxuLsfg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELLO6LKbjAGC1Ug/qO6Isdham0sbJV7Ng0gjiAwtdrod081V7cw7jBfTO3zlEZ/Dvw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -227,14 +268,14 @@ namespace HeritageWebApplication.Migrations
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "bb684a51-a45e-4009-8846-0ef46e585add",
+                            ConcurrencyStamp = "42ac3451-2a44-44e6-89a7-1565ca8af1ce",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "24a148ce-7b39-42e6-8072-ab8c826260e1",
+                            ConcurrencyStamp = "821033ca-21d6-466a-9a1b-ac9ac52731d7",
                             Name = "user",
                             NormalizedName = "USER"
                         });
@@ -348,6 +389,28 @@ namespace HeritageWebApplication.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("BuildingRenovationCompany", b =>
+                {
+                    b.HasOne("HeritageWebApplication.Models.Building", null)
+                        .WithMany()
+                        .HasForeignKey("BuildingsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HeritageWebApplication.Models.RenovationCompany", null)
+                        .WithMany()
+                        .HasForeignKey("RenovationCompaniesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("HeritageWebApplication.Models.Building", b =>
+                {
+                    b.HasOne("HeritageWebApplication.Models.User", null)
+                        .WithMany("Buildings")
+                        .HasForeignKey("UserId");
+                });
+
             modelBuilder.Entity("HeritageWebApplication.Models.Comment", b =>
                 {
                     b.HasOne("HeritageWebApplication.Models.HeritageObject", "HeritageObject")
@@ -441,6 +504,8 @@ namespace HeritageWebApplication.Migrations
 
             modelBuilder.Entity("HeritageWebApplication.Models.User", b =>
                 {
+                    b.Navigation("Buildings");
+
                     b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
