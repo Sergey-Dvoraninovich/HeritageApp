@@ -28,12 +28,32 @@ namespace HeritageWebApplication.Repository
     
         public void Save(RenovationCompany renovationCompany)
         {
+            if (renovationCompany.Buildings != null)
+            {
+                List<Building> buildings = renovationCompany.Buildings.ToList();
+                renovationCompany.Buildings.Clear();
+                //List<Building> buildings = new List<Building>();
+                foreach (Building building in buildings)
+                {
+                    renovationCompany.Buildings.Add(_context.Buildings.FirstOrDefault(b => b.Id == building.Id));
+                }
+                //renovationCompany.Buildings = buildings;
+            }
             _context.RenovationCompanies.Add(renovationCompany);
             _context.SaveChanges();
         }
         
         public void Update(RenovationCompany renovationCompany)
         {
+            if (renovationCompany.Buildings != null)
+            {
+                List<Building> buildings = renovationCompany.Buildings.ToList();
+                renovationCompany.Buildings.Clear();
+                foreach (Building building in buildings)
+                {
+                    renovationCompany.Buildings.Add(_context.Buildings.FirstOrDefault(b => b.Id == building.Id));
+                }
+            }
             _context.RenovationCompanies.Update(renovationCompany);
             _context.SaveChanges();
         }
