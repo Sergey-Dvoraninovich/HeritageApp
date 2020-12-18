@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HeritageWebApplication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201213182718_'name_new5'")]
-    partial class name_new5
+    [Migration("20201218145136_'name_new7'")]
+    partial class name_new7
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -84,8 +84,8 @@ namespace HeritageWebApplication.Migrations
                     b.Property<string>("Text")
                         .HasColumnType("text");
 
-                    b.Property<string>("Time")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
@@ -225,13 +225,13 @@ namespace HeritageWebApplication.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "be28c19f-3d40-4d1f-a709-52518a5d5e96",
+                            ConcurrencyStamp = "6ec5633c-f564-4725-ad16-49ea19ecf27f",
                             Email = "heritage.app.admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "HERITAGE.APP.ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAELLO6LKbjAGC1Ug/qO6Isdham0sbJV7Ng0gjiAwtdrod081V7cw7jBfTO3zlEZ/Dvw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEa9MM9ZAizINhF4SPgglavI+33e/Bmjnp4ryeGwjxsMAoSvXcV0ZJwB8oLX8ihW8g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -270,14 +270,14 @@ namespace HeritageWebApplication.Migrations
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "42ac3451-2a44-44e6-89a7-1565ca8af1ce",
+                            ConcurrencyStamp = "23d1e7a3-773f-4063-a36b-31a8ab987d11",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "821033ca-21d6-466a-9a1b-ac9ac52731d7",
+                            ConcurrencyStamp = "05161e6e-dd72-4347-b18b-b272fb73aeb5",
                             Name = "user",
                             NormalizedName = "USER"
                         });

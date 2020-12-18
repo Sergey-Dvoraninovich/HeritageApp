@@ -54,12 +54,13 @@ namespace HeritageWebApplication.Areas.Admin.Controllers
         {
             ViewBag.HeritageObjects = _manager.HeritageObjectRepository.GetAll();
             ViewBag.Users = _userManager.Users.Where(u=> true);
+            //DateTime time = DateTime.UtcNow;
             if (ModelState.IsValid)
             {
                 Comment comment = new Comment
                 {
                     Text = model.Text,
-                    Time = DateTime.Now.ToString() + "  ",
+                    Time = DateTime.UtcNow,
                     IsEdited = false,
                     HeritageObjectId = model.HeritageObjectId,
                     HeritageObject = _manager.HeritageObjectRepository.Get(model.HeritageObjectId),
@@ -102,7 +103,7 @@ namespace HeritageWebApplication.Areas.Admin.Controllers
                 if (comment != null)
                 {
                     comment.Text = model.Text;
-                    comment.Time = DateTime.Now.ToString() + "  ";
+                    comment.Time = DateTime.UtcNow;
                     comment.IsEdited = true;
                     comment.HeritageObjectId = model.HeritageObjectId;
                     comment.HeritageObject = _manager.HeritageObjectRepository.Get(model.HeritageObjectId);

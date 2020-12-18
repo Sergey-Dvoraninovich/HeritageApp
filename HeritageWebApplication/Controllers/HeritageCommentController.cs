@@ -7,6 +7,7 @@ using HeritageWebApplication.Repository;
 using HeritageWebApplication.Services;
 using HeritageWebApplication.ViewModels;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -61,7 +62,7 @@ namespace HeritageWebApplication.Controllers
                 Comment comment = new Comment
                 {
                     Text = model.Text,
-                    Time = DateTime.Now.ToString() + "  ",
+                    Time = DateTime.UtcNow,
                     IsEdited = false,
                     HeritageObjectId = id,
                     HeritageObject = _manager.HeritageObjectRepository.Get(id),
@@ -104,7 +105,7 @@ namespace HeritageWebApplication.Controllers
                 if (comment != null)
                 {
                     comment.Text = model.Text;
-                    comment.Time = DateTime.Now.ToString() + "  ";
+                    comment.Time = DateTime.UtcNow;
                     comment.IsEdited = true;
                     comment.HeritageObject = _manager.HeritageObjectRepository.Get(comment.HeritageObjectId);
                     _manager.CommentRepository.Update(comment);

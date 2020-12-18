@@ -119,8 +119,8 @@
         <e p="HeritageWebApplication.csproj" t="IncludeRecursive" />
         <e p="MailConfig.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20201213182718_'name_new5'.cs" t="Include" />
-          <e p="20201213182718_'name_new5'.Designer.cs" t="Include" />
+          <e p="20201218145136_'name_new7'.cs" t="Include" />
+          <e p="20201218145136_'name_new7'.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -236,8 +236,10 @@
               <e p="7edef934-8386-424a-8740-dc1d3644b1b2_nastol.com.ua-225408.jpg" t="Include" />
               <e p="8085108c-19cb-4c49-aeb8-27175e3cc44c_account.jpg" t="Include" />
               <e p="8b1b06dd-b760-4f4b-90de-0e88d04c0fb1_cycle.png" t="Include" />
+              <e p="9663b4ca-ab2c-4517-bd41-dd29870b3ec9_calmdown.png" t="Include" />
               <e p="a0981805-d8c3-4302-afa3-81b8596721c3_calmdown.png" t="Include" />
               <e p="ab8b88d3-67ef-4cd0-b2b7-50999be6afcc_house.jpg" t="Include" />
+              <e p="abec110a-587d-4613-9200-466ec5304320_colors.jpg" t="Include" />
               <e p="af8d8953-5fed-4fb1-a55f-8d718faf6f4d_Account1-removebg-preview.png" t="Include" />
               <e p="afaaf731-6082-46c8-b8ab-f55b1084c544_colors.jpg" t="Include" />
               <e p="bb237c45-bd87-4f4f-ae3c-f05bf3840bcb_colors.jpg" t="Include" />
@@ -259,10 +261,13 @@
             <e p="all-20201211.log" t="Include" />
             <e p="all-20201213.log" t="Include" />
             <e p="all-20201214.log" t="Include" />
+            <e p="all-20201215.log" t="Include" />
+            <e p="all-20201218.log" t="Include" />
             <e p="error-20201210.log" t="Include" />
             <e p="error-20201211.log" t="Include" />
             <e p="error-20201213.log" t="Include" />
             <e p="error-20201214.log" t="Include" />
+            <e p="error-20201218.log" t="Include" />
           </e>
         </e>
       </e>

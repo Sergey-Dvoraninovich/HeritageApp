@@ -1,4 +1,5 @@
-﻿@model IEnumerable<HeritageWebApplication.Models.Comment>
+﻿@using Microsoft.AspNetCore.Http
+@model IEnumerable<HeritageWebApplication.Models.Comment>
 @{
     Layout = "_Layout";
 }
@@ -14,6 +15,14 @@
            background-color: #8a9bab;
        }
 </style>
+
+<script>
+    function setLocalDate(utcDate) {
+        var date = new Date(utcDate);
+        document.getElementsByName('commentTime')[document.getElementsByName('commentTime').length - 1].innerText = "Date: " + date.toLocaleString();
+    }
+</script>
+
 <div>
     <p>@ViewBag.HeritageObject.Type</p>
     <p><h3>Краткое описание:</h3></p>
@@ -37,7 +46,15 @@
                 <p>@comment.Text</p>
                 <p>
                     <table>
-                        <tr>@comment.Time</tr>
+                        <p name="commentTime">
+                            @comment.Time.ToString("yyyy-MM-ddTHH:mm:ssZ")
+                        </p>
+                
+                        <script>
+                            var convertDate = document.getElementsByName('commentTime')[document.getElementsByName('commentTime').length - 1].innerText;
+                            setLocalDate(convertDate);
+                        </script>
+
                         @{
                             if (@comment.IsEdited)
                             {

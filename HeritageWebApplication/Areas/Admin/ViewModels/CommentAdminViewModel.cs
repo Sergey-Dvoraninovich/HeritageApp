@@ -1,4 +1,5 @@
-﻿using HeritageWebApplication.Models;
+﻿using System;
+using HeritageWebApplication.Models;
 
 namespace HeritageWebApplication.Areas.Admin.ViewModels
 {
@@ -8,7 +9,7 @@ namespace HeritageWebApplication.Areas.Admin.ViewModels
         
         public string Text { get; set; }
         public bool IsEdited { get; set; }
-        public string Time { get; set; }
+        public DateTime Time { get; set; }
         
         public HeritageObject HeritageObject { get; set; }  
         public int HeritageObjectId { get; set; }

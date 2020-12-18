@@ -5,7 +5,14 @@
 @{
     ViewBag.Title = "Список комментариев";
 }
- 
+<script>
+    function setLocalDate(utcDate) {
+        var date = new Date(utcDate);
+        document.getElementsByName('commentTime')[document.getElementsByName('commentTime').length - 1].innerText = "Date: " + date.toLocaleString();
+    }
+</script>
+
+
 <a href="~/admin/comment/create">Добавить комментарий</a>
  
 <div>
@@ -14,11 +21,19 @@
         <p>@comment.Text</p>
         <p>
             <table>
-                <tr>@comment.Time</tr>
+                <p name="commentTime">
+                    @comment.Time.ToString("yyyy-MM-ddTHH:mm:ssZ")
+                </p>
+                
+                <script>
+                    var convertDate = document.getElementsByName('commentTime')[document.getElementsByName('commentTime').length - 1].innerText;
+                    setLocalDate(convertDate);
+                </script>
+
                 @{
                     if (@comment.IsEdited)
                     {
-                        <tr>edited</tr>
+                        <p>edited</p>
                     }
                 }
             </table>

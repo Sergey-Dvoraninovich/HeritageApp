@@ -108,8 +108,9 @@ namespace HeritageWebApplication
             {
                 app.UseStatusCodePagesWithRedirects("/error/{0}");
             }
-            
+
             app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

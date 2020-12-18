@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HeritageWebApplication.Migrations
 {
-    public partial class name_new5 : Migration
+    public partial class name_new7 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -251,7 +251,7 @@ namespace HeritageWebApplication.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Text = table.Column<string>(type: "text", nullable: true),
                     IsEdited = table.Column<bool>(type: "boolean", nullable: false),
-                    Time = table.Column<string>(type: "text", nullable: true),
+                    Time = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     HeritageObjectId = table.Column<int>(type: "integer", nullable: false),
                     UserId = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -277,14 +277,14 @@ namespace HeritageWebApplication.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { 1, "42ac3451-2a44-44e6-89a7-1565ca8af1ce", "admin", "ADMIN" },
-                    { 2, "821033ca-21d6-466a-9a1b-ac9ac52731d7", "user", "USER" }
+                    { 1, "23d1e7a3-773f-4063-a36b-31a8ab987d11", "admin", "ADMIN" },
+                    { 2, "05161e6e-dd72-4347-b18b-b272fb73aeb5", "user", "USER" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "Image", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { 1, 0, "be28c19f-3d40-4d1f-a709-52518a5d5e96", "heritage.app.admin@gmail.com", true, null, false, null, "HERITAGE.APP.ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAELLO6LKbjAGC1Ug/qO6Isdham0sbJV7Ng0gjiAwtdrod081V7cw7jBfTO3zlEZ/Dvw==", null, false, "", false, "admin" });
+                values: new object[] { 1, 0, "6ec5633c-f564-4725-ad16-49ea19ecf27f", "heritage.app.admin@gmail.com", true, null, false, null, "HERITAGE.APP.ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEEa9MM9ZAizINhF4SPgglavI+33e/Bmjnp4ryeGwjxsMAoSvXcV0ZJwB8oLX8ihW8g==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
